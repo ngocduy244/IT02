@@ -1,0 +1,405 @@
+/*PC*/
+@media screen and (min-width: 1024px){
+  
+}
+
+/*Ipad*/
+@media screen and (min-width: 740px) and (max-width: 1023px){
+/*header*/
+.heading{
+    font-size: 13px;
+    padding: 15px;
+}
+
+/*nav menu*/
+#Menu{
+    font-size: 14px;
+    justify-content: space-between;
+}
+
+#Menu .logo{
+    width: 60px;
+}
+
+#menu-list > ul > li a{
+    padding: 15px;
+}
+
+#icon-list{
+    align-items: baseline;
+}
+
+.down{
+    height: 25px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#icon-list .cart,
+#icon-list .user{
+    margin-left: 0;
+    padding: 5px;
+    position: relative;
+}
+
+#icon-list .cart a,
+#icon-list .user a,
+#icon-list .search a{
+    color: #000;
+    font-size: 20px;
+    border: 0;
+    background-color: #DCDCDC;
+}
+
+
+
+#icon-list .cart span{
+    display: none;
+}
+
+#icon-list .down input{
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    z-index: 100;
+}
+
+.search input{
+    width: 400px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+#icon-list .down .search:hover input{
+    display: block;
+}
+
+.down .search{
+    height: 0px;
+    width: 100%;
+    background-color: #DCDCDC;
+    border-radius: 0px;
+    padding: 0 ;
+}
+/*ADS*/
+.carousel-inner img{
+    height: 400px;
+}
+
+/*ads-sub*/
+.ads-sub{
+    display: none;
+}
+
+/*best seller*/
+div.filtering > div{
+    height: 350px;
+}
+
+.BS img{
+    min-height: 200px;
+}
+div.comment-top .name,
+div.comment-top .money{
+    font-size: 18px;
+}
+
+.slick-prev::before, .slick-next::before{
+    display: none;
+}
+
+/*favorite product*/
+.favorite{
+    width: 100%;
+}
+
+.product{
+    width: 45%;
+    margin: 1%;
+}
+
+
+/*section foot*/
+.foot{
+    line-height: 1.6;
+}
+
+div.ggmap{
+    display: none;
+}
+
+.address{
+    margin-left: 10px;
+}
+
+}
+
+/*Mobile*/
+
+@media screen and (max-width: 739px){
+    body{
+        position: relative;
+    }
+     /*header*/
+    .heading{
+        font-size: 7px;
+        padding: 5px 0;
+    }
+
+    .heading > .left > div,
+    .heading > .right > div{
+        padding: 0 5px;
+    }
+    
+   
+    /*menu-list*/
+    #Menu{
+        font-size: 12px;
+        max-width: 100%;
+        justify-content: space-between;
+        padding: 0 5px;
+        align-items: center;
+    }
+
+    #Menu .logo{
+        width: 50px;
+    }
+
+    #menu-list > ul > li{
+        max-width: 400px;
+    }
+
+    #menu-list > ul{
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        left: 0;
+        z-index: 100;
+        background-color: #fff;
+        width: 100%;
+        height: calc(100vh - 99px);
+    }
+
+    #main-menu .sub .menusub{
+        position: relative;
+    }
+
+    #menu-list > ul > li a{
+        font-size: 20px;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .down{
+        height: 25px;
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+    }
+    #icon-list .cart,
+    #icon-list .user{
+        display: none;
+    }
+    
+    #icon-list .cart span{
+        display: none;
+    }
+
+    #icon-list .search a{
+        color: #000;
+        font-size: 20px;
+        background-color: #DCDCDC;
+    }
+    
+    #icon-list .down input{
+        display: none;
+        position: absolute;
+        top: 30px;
+        right: 25px;
+        z-index: 100;
+        width: 250px;
+        height: 30px;
+        font-size: 15px;
+        border-radius: 5px;
+    }
+    
+    .down .search{
+        height: 0px;
+        width: 100%;
+        background-color: #DCDCDC;
+        border-radius: 0px;
+        padding: 0 ;
+    }
+    
+
+    #icon-list .down .search:hover input{
+        display: block;
+        border: 1px solid #000;
+    }
+
+    /*mobile-menu*/
+    .navBar-mobile{
+        display: block;
+    }
+
+    .mobile-menu-list{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        background-color: #fff;
+        border-top: 1px solid black;
+        z-index: 100;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+    
+    .mobile-menu-list p{
+        margin: 0;
+    }
+    
+    .mobile-menu-list > li{
+        font-size: 14px;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .mobile-menu-list > li a{
+        color: black;
+        text-decoration: none;
+    }
+    
+    /*ADS*/
+    section.ads-main{
+        width: 100%;
+    }
+    .carousel-inner img{
+        max-height: 200px;
+    }
+
+    #demo{
+        margin: 0;
+    }
+
+    /*ads-sub*/
+    .ads-sub{
+        display: none;
+    }
+
+    /*best seller*/
+    
+    .BestSeller{
+        width: 100%;
+    }
+    
+    div.filtering > div{
+        height: 330px;
+    }
+
+    .slick-prev::before, .slick-next::before{
+        display: none;
+    }
+
+    div.comment-top .name,
+    div.comment-top .money{
+        font-size: 16px;
+    }
+
+    /*favorite product*/
+    .favorite{
+        width: 100%;
+    }
+
+    .favorite h2{
+        font-size: 22px;
+    }
+
+    .product{
+        width: 42%;
+        margin: 2%;
+    }
+
+    .product img {
+        min-height: 200px;
+    }
+
+    .product .comment h6{
+        font-size: 14px;
+    }
+
+    div.label,
+    .price .money,
+    .price .icon-buy{
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .price > div{
+        padding: 5px 0 0;
+    }
+
+    /*Blog*/
+
+    .Blog-sub .content p{
+        display: none;
+    }
+
+    .Blog-sub > .title{
+        font-size: 12px;
+    }
+
+    div.Blog-sub{
+        width: 48%;
+    }
+    /*section back*/
+    a#top{
+        font-size: 12px;
+        padding: 10px;
+        bottom: 80px;
+        right: 20px;
+    }
+
+    /*Introduce shop*/
+    .introduce-shop{
+        display: none;
+    }
+
+    /*section service*/
+    .service{
+        display: none;
+    }
+
+    /*Phone*/
+    .phone div.phone{
+        padding-left: 10px;
+    }
+
+    
+    /*section foot*/
+    .foot{
+        line-height: 1.6;
+        font-size: 16px;
+        margin-bottom: 52px;
+    } 
+
+    div.address h4,
+    div.social-media h4{
+        font-size: 19px;
+    }
+
+    div.address #Contact{
+        display: block;
+    }
+
+    #list-store,
+    div.ggmap,
+    #embed_fb,
+    #contact-list{
+        display: none;
+    }
+}

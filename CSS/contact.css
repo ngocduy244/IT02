@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: whitesmoke;
+}
+/*header*/
+header{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    overflow: auto;
+    padding: 30px;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+li > a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+ul.menu{
+    display: flex;
+    justify-content: flex-start;
+}
+ul > li{
+    max-width: 500px;
+}
+.menusub{
+    display: none;
+}
+li.sub:hover .menusub{
+    display: block;
+    background-color: whitesmoke;
+    position: absolute;
+    z-index: 1;
+}
+ul.menusub > li{
+    border-top: 1px solid;
+}
+input{
+    width: 200px;
+    height: 30px;
+    border: outset ;
+    border-width: 3px;
+}
+div.icon{
+    display: flex;
+    float: right;
+}
+div.icon > div > a{
+    color: black;
+}
+div.icon > .input{
+    padding-right: 0;
+}
+div.icon > div{
+    padding: 0 10px;
+}
+div.logo img{
+    width: 100%;
+}
+div.logo{
+    height: 30px;
+    width: 50px;
+    float: left;
+    margin-right: 30px;
+}
+/*section body*/
+section.body{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+div.body{
+    text-align: center;
+    display: flex;
+}
+div.main{
+    width: 70%;
+}
+div.sub{
+    width: 30%;
+}
+div.ND{
+    margin: 0 0 30px;
+}
+div.HT{
+    margin-bottom: 30px;
+}
+div.search{
+    font-size: 30px;
+    font-weight: 400;
+}
