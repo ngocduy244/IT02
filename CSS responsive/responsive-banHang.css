@@ -1,291 +1,73 @@
 /*Ipad*/
 @media (min-width: 740px) and (max-width: 1023px){
-/*header*/
-.heading{
-    font-size: 13px;
-    padding: 15px;
-}
-/*nav menu*/
-#Menu{
-    font-size: 14px;
-    justify-content: space-between;
-}
+    /*section product*/
+    section.product{
+        width: 95%;
+    }
 
-#Menu .logo{
-    width: 60px;
-}
+    div.information, div.color{
+        padding: 20px 20px 0;
+    }
 
-#menu-list > ul > li a{
-    padding: 15px;
-}
+    div.information div span{
+        font-size: 15px;
+    }
 
-#icon-list{
-    align-items: baseline;
-}
+    div.product > div,
+    div.item > img{
+        height: 500px;
+    }
 
-.down{
-    height: 25px;
-    width: 90%;
-    margin: 0 auto;
-    position: relative;
-}
+    li.msp{
+        font-size: 12px;
+    }
 
-#icon-list .cart,
-#icon-list .user{
-    margin-left: 0;
-    padding: 5px;
-    position: relative;
-}
+    div.mau img{
+        height: 40px;
+    }
 
-#icon-list .cart a,
-#icon-list .user a,
-#icon-list .search a{
-    color: #000;
-    font-size: 20px;
-    border: 0;
-    background-color: #DCDCDC;
-}
+    div.dk{
+        font-size: 17px;
+    }
 
+    div.button > button{
+        font-size: 12px;
+    }
 
+    li span{
+        font-size: 18px;
+    }
 
-#icon-list .cart span{
-    display: none;
-}
+    /*Other product*/
+    .OP{
+        width: 93%;
+    }
 
-#icon-list .down input{
-    display: none;
-    position: absolute;
-    top: 30px;
-    right: 0;
-    z-index: 100;
-}
+    div.filtering > div{
+        height: 350px;
+    }
 
-.search input{
-    width: 400px;
-    height: 50px;
-    font-size: 20px;
-    border-radius: 10px;
-}
+    .slick-prev::before, .slick-next::before{
+        display: none;
+    }
 
-#icon-list .down .search:hover input{
-    display: block;
-}
-
-.down .search{
-    height: 0px;
-    width: 100%;
-    background-color: #DCDCDC;
-    border-radius: 0px;
-    padding: 0 ;
-}
-
-/*section product*/
-section.product{
-    width: 95%;
-}
-
-div.information, div.color{
-    padding: 20px 20px 0;
-}
-
-div.information div span{
-    font-size: 15px;
-}
-
-div.product > div,
-div.item > img{
-    height: 500px;
-}
-
-li.msp{
-    font-size: 12px;
-}
-
-div.mau img{
-    height: 40px;
-}
-
-div.dk{
-    font-size: 17px;
-}
-
-div.button > button{
-    font-size: 12px;
-}
-
-/*Other product*/
-.OP{
-    width: 93%;
-}
-
-div.filtering > div{
-    height: 350px;
-}
-
-.slick-prev::before, .slick-next::before{
-    display: none;
-}
-
-.comment{
-    font-size: 19px;
-}
-
-/*section foot*/
-.foot{
-    line-height: 1.6;
-}
-
-div.ggmap{
-    display: none;
-}
-
-.address{
-    margin-left: 10px;
-}
+    .comment{
+        font-size: 19px;
+    }
 
 }
 
 /*Mobile*/
 
 @media screen and (max-width: 739px){
-    body{
-        position: relative;
-    }
-     /*header*/
-    .heading{
-        font-size: 7px;
-        padding: 5px 0;
-    }
-
-    .heading > .left > div,
-    .heading > .right > div{
-        padding: 0 5px;
-    }
-    
-   
-    /*menu-list*/
-    #Menu{
-        font-size: 12px;
-        max-width: 100%;
-        justify-content: space-between;
-        padding: 0 5px;
-        align-items: center;
-    }
-
-    #Menu .logo{
-        width: 50px;
-    }
-
-    #menu-list > ul > li{
-        max-width: 400px;
-    }
-
-    #menu-list > ul{
-        display: none;
-        position: absolute;
-        top: 50px;
-        right: 0;
-        left: 0;
-        z-index: 100;
-        background-color: #fff;
-        width: 100%;
-        height: calc(100vh - 99px);
-    }
-
-    #main-menu .sub .menusub{
-        position: relative;
-    }
-
-    #menu-list > ul > li a{
-        font-size: 20px;
-        padding: 10px;
-        font-size: 18px;
-    }
-
-    .down{
-        height: 25px;
-        width: 90%;
-        margin: 0 auto;
-        position: relative;
-    }
-    #icon-list .cart,
-    #icon-list .user{
-        display: none;
-    }
-    
-    #icon-list .cart span{
-        display: none;
-    }
-
-    #icon-list .search a{
-        color: #000;
-        font-size: 20px;
-        background-color: #DCDCDC;
-    }
-    
-    #icon-list .down input{
-        display: none;
-        position: absolute;
-        top: 30px;
-        right: 25px;
-        z-index: 100;
-        width: 250px;
-        height: 30px;
-        font-size: 15px;
-        border-radius: 5px;
-    }
-    
-    .down .search{
-        height: 0px;
-        width: 100%;
-        background-color: #DCDCDC;
-        border-radius: 0px;
-        padding: 0 ;
-    }
-    
-
-    #icon-list .down .search:hover input{
-        display: block;
-        border: 1px solid #000;
-    }
-
-    /*mobile-menu*/
-    .navBar-mobile{
-        display: block;
-    }
-
-    .mobile-menu-list{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        position: fixed;
-        background-color: #fff;
-        border-top: 1px solid black;
-        z-index: 100;
-        bottom: 0;
-        right: 0;
-        left: 0;
-    }
-    
-    .mobile-menu-list p{
-        margin: 0;
-    }
-    
-    .mobile-menu-list > li{
-        font-size: 14px;
-        text-align: center;
-        padding: 5px;
-    }
-
-    .mobile-menu-list > li a{
-        color: black;
-        text-decoration: none;
-    }
-
     /*section product*/
-
     section.product{
         width: 100%;
+    }
+
+    div.Product{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
 
     div.color ul > li,
@@ -299,18 +81,25 @@ div.ggmap{
     
     div.item > img,
     div.color{
-        height: 300px;
+        height: 400px;
     }
 
     div.item{
-        margin: 0 5px;
+        margin: 0;
+        width: 65%;
     }
 
-    div.information, 
-    div.color{
+    div.information{
+        width: 30%;
         padding: 3px;
     }
+    div.color{
+        width: 100%;
+        background-color: #FFFFF0;
+        height: 400px;
+    }
 
+    /* right*/
     li.price-old,
     li.price-new,
     li.image-product{
@@ -318,7 +107,7 @@ div.ggmap{
     }
     
     li.msp{
-        font-size: 7px;
+        font-size: 9px;
     }
 
     div.special{
@@ -326,41 +115,34 @@ div.ggmap{
         border-radius: 5px;
     }
     
-    div.mau img{
-        height: 40px;
-    }
     
-    div.dk{
-        font-size: 17px;
-    }
-    
-    div.button > button{
-        font-size: 12px;
-    }
 
     /*color left*/
     .color ul li span{
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .btnColor .mau img{
         max-height: 30px;
     }
 
-    div.dk a{
-        font-size: 10px;
+    div.dk{
+        padding: 5px;
     }
 
-    div.button{
-        padding: 0;
+    div.mau img{
+        min-height: 100px;
+    }
+
+    div.dk a{
+        font-size: 17px;
     }
 
     div.button > button{
-        font-size: 10px;
-    }
-
-    .like-share{
-        display: none;
+        font-size: 17px;
+        background-color: #FFFFF0;
+        padding: 0 0 10px;
+        border-bottom: 1px solid #000 ;
     }
 
     /*other product*/
@@ -377,54 +159,8 @@ div.ggmap{
     }
 
     .comment{
-        font-size: 14px;
+        font-size: 15px;
     }
-
-    /*section back*/
-    a#top{
-        font-size: 12px;
-        padding: 10px;
-        bottom: 80px;
-        right: 20px;
-    }
-
-    /*Introduce shop*/
-    .introduce-shop{
-        display: none;
-    }
-
-    /*section service*/
-    .service{
-        display: none;
-    }
-
-    /*Phone*/
-    .phone div.phone{
-        padding-left: 10px;
-    }
-
     
-    /*section foot*/
-    .foot{
-        line-height: 1.6;
-        font-size: 16px;
-        margin-bottom: 52px;
-    } 
-
-    div.address h4,
-    div.social-media h4{
-        font-size: 19px;
-    }
-
-    div.address #Contact{
-        display: block;
-    }
-
-    #list-store,
-    div.ggmap,
-    #embed_fb,
-    #contact-list{
-        display: none;
-    }
 }
     
