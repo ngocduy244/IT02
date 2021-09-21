@@ -7,17 +7,22 @@
     }
     
     /*nav menu*/
-    #Menu{
+    #Menu,
+    ul.menusub > li{
         font-size: 14px;
         justify-content: space-between;
     }
+
+    #Menu{
+        padding: 0 5px;
+    }
     
     #Menu .logo{
-        width: 60px;
+        width: 100px;
     }
     
     #menu-list > ul > li a{
-        padding: 14px;
+        padding: 9px;
     }
     
     #icon-list{
@@ -118,13 +123,15 @@
     #Menu{
         font-size: 12px;
         max-width: 100%;
-        justify-content: space-between;
-        padding: 0 5px;
-        align-items: center;
+        padding: 0 10px;
+        text-align: left;
     }
 
     #Menu .logo{
-        width: 50px;
+        width: 150px;
+    }
+    #Menu .logo img{
+        height: 50px;
     }
 
     #menu-list > ul > li{
@@ -140,7 +147,7 @@
         z-index: 100;
         background-color: #fff;
         width: 100%;
-        height: calc(100vh - 99px);
+        height: 100vh;
     }
 
     #main-menu .sub .menusub{
@@ -200,6 +207,10 @@
         border: 1px solid #000;
     }
 
+    .menusub::after{
+        display: none;
+    }
+
     /*mobile-menu*/
     .navBar-mobile{
         display: block;
@@ -231,6 +242,11 @@
     .mobile-menu-list > li a{
         color: black;
         text-decoration: none;
+    }
+
+    /*product-image*/
+    .image-product:hover span{
+        display: none;
     }
 
     /*section back*/

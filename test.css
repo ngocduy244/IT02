@@ -1,94 +1,89 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-body{
-    background-color: #FFFFF0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-/*Nav Logo*/
-#logo img{
-    width: 100%;
-    max-height: 300px;
+/*section contact*/
+section.contact{
+    width: 90%;
+    margin: 50px auto;
 }
 
-/*ads*/
-section.ads-main{
-    width: 100%;
-    margin: 0 auto;
-}
-
-.carousel-inner img{
-    width: 100%;
-    max-height: 500px;
-}
-
-/*ads-sub*/
-.ads-sub{
+.main-contact{
+    text-align: center;
     display: flex;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
-    margin: 10px 0;
 }
 
-/*best seller*/
-.BestSeller{
+.main-contact .left{
+    width: 70%;
+}
+
+.main-contact .right{
+    width: 30%;
+}
+
+.main-contact h4{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.main-contact a{
+    text-decoration: none;
+    color: #000;
+}
+
+.main-contact .left .email-contact a:hover{
+    color: #0000FF;
+}
+
+.main-contact .left .store{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main-contact > .left > ul > li,
+.main-contact > .right  ul > li{
+    font-weight: normal;
+}
+/*left*/
+
+.OP{
     text-align: center;
     width: 90%;
     margin: 0 auto;
     font-family: Arial, Helvetica, sans-serif;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #ccc;
+}
+.OP .title{
+    margin: 20px 0;
+    font-size: 25px;
 }
 
-.BestSeller > div,
-.BestSeller h2{
-    width: 100%;
-    margin: 20px 0;
+div.filtering{
+    margin-bottom: 20px;
 }
 
 div.filtering > div{
     margin: 0 20px;
-    height: 600px;
+    height: 450px;
 }
 
-.BS{
-    background-color: #fff ;
-    position: relative;
-}
-.BS img{
+div.thumb-sub img{
     width: 100%;
-    transition: transform 1s;
+    transition: opacity 1s;
 }
-div.BS:hover img{
-    transform: scale(1.2);
-    opacity: 0.7;
+
+div.thumb-sub .image-product:hover img{
+    opacity: 0.5;
 }
-div.BS > div{
+
+div.thumb-sub > div{
     overflow: hidden;
 }
 
-div.comment-top .name{
-    margin: 5px 0;
-    font-size: 15px;
-    font-weight: bold;
+div.thumb-sub{
+    background-color: #fff ;
 }
 
-div.comment-top .money{
-    padding-bottom: 10px;
+.comment{
+    padding: 10px;
     font-size: 14px;
-}
-
-div.label{
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-weight: bold;
-    background-color: #DAA520;
-    padding: 5px 20px;
-    color: #000;
-    border-radius: 5px 0 0 0;
 }
 
 .slick-prev::before, .slick-next::before{
@@ -96,142 +91,46 @@ div.label{
     color: #000;
 }
 
-/*favorite product*/
-.favorite{
-    text-align: center;
-    width: 90%;
-    margin: 10px auto;
-    font-family: Arial, Helvetica, sans-serif;
-    border-bottom: 1px solid #000;
-}
-.favorite-list{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.product{
-    width: 24%;
-    margin:0.5%;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: #fff ;
-    position: relative;
-    border-bottom: none;
-}
-.product img{
-    width: 100%;
-    min-height: 400px;
-    transition: transform 1s;
-    border-radius: 5px 5px 0 0;
+.main-contact > .left .Blog{
+    text-align: left;
+    margin-top: 10px;
 }
 
-div.product > div{
-    overflow: hidden;
+/*right*/
+.main-contact > .right{
+    text-align: left;
 }
 
-div.comment{
-    margin: 10px 0 0;
+.main-contact > .right h3{
+    border-bottom: 1px solid #ccc;
+    padding: 0 0 10px;
 }
 
-.price .money{
-    width: 100%;
-    border-radius: 0 0 0 5px;
-    background-color: #FAEBD7;
-    font-weight: bold;
-    border-right: none;
-    border-left: none;
+.main-contact > .right > .search{
+    background-color: #fff;
+    width: 290px;
+    border: 1px solid #ccc;
+    margin: 10px 0 20px;
 }
 
-div.product:hover img{
-    transform: scale(1.2);
-    opacity: 0.7;
+.main-contact > .right > .search input{
+    width: 250px;
 }
 
-.price > div{
-    border: 2px solid #000;
-    padding: 10px;
-} 
+.main-contact > .right > .search span{
+    padding: 8px;
+}
 
-div.xem > a{
-    font-size: 15px;
-    border: 1px solid black;
-    text-decoration: none;
-    color: black;
-    padding: 5px;
+.main-contact > .right > .search span:hover{
+   background-color: #ccc;
+   cursor: pointer;
 }
-div.xem{
-    padding: 10px; 
-    margin: 10px;
+
+.main-contact > .right .news{
+    border-top: 1px solid #000;
+    padding: 20px 0;
 }
-div.xem > a:hover{
-    background-color: #ccc;
-}
-/*section blog*/
-.Blog{
-    width: 100%;
-    margin: 10px auto;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.blog > h3{
-    text-align: center;
-}
-.Blog-sub > .title{
-    font-size: 15px;
-    font-weight: bold;
-}
-div.content{
-    font-size: 13px;
-    line-height: 21px;
-    font-weight: 400;
-    color: #666;
-}
-div.Blog{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-div.Blog-sub{
-    width: 31%;
-    margin:0.5%;
-    padding: 5px; 
-}
-div.Blog-sub img{
-    width: 100%;
-    transition: transform 1s;
-}
-div.Blog-sub img:hover{
-    transform: scale(1.2);
-}
-div.Blog-sub > div{
-    overflow: hidden;
-}
-/*section service*/
-.service{
-    width: 100%;
-    margin: 0 auto;
-    font-size: 12px;
-    color: #666;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #fafafa;
-}
-div.title h4{
-    font-size: 18px;
-    font-weight: bold;
-}
-div.title div.icon{
-    float: left;
-    font-size: 20px;
-    padding: 0 10px;
-}
-.service-con div > ul{
-    list-style-type: unset;
-}
-div.service{
-    display: flex;
-    justify-content: center;
-}
-div.service-con{
-    width: 22%;
-    margin:0.5%;
-    padding: 20px;
+
+.main-contact > .right  ul > li{
+    margin: 10px 0 ;
 }

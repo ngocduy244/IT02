@@ -11,14 +11,15 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="./js/jquery-3.6.0.min.js"></script>
-        <script src="./js/Jeans.js"></script>
+        <script src="./js/back-scroll.js"></script>
+        <script src="./js/change-img.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="shortcut icon" href="./images/Logo/logo-icon.png">
+        <link rel="shortcut icon" href="./images/Logo/logo-2.png">
         <link rel="stylesheet" href="./CSS/menu-foot-imgProduct.css">
-        <link rel="stylesheet" href="./CSS/Jeans.css">
+        <link rel="stylesheet" href="./CSS/product.css">
         <link rel="stylesheet" href="./CSS responsive/responsive-menu-foot.css">
-        <link rel="stylesheet" href="./CSS responsive/responsive-jean.css">
+        <link rel="stylesheet" href="./CSS responsive/responsive-product.css">
         <title>Quần jeans nam hàng hiệu</title>
     </head>
     <body onload="init()">
@@ -39,25 +40,24 @@
         <!--Phần Menu-->
         <nav id="Menu">
             <div class="logo">
-                <img src="./images/Logo/logo-icon.png" alt="">
+                <img src="./images/Logo/logo-5.png" alt="">
             </div>
             <div id="menu-list">
                 <ul id="main-menu">
-                    <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Trang Chủ</a></li>
+                    <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Trang Chủ</a></li>
                     <li class="sub">
                         <a href="javascript:void(0);">Quần Nam <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                         <ul class="menusub">
-                            <li><a href="#">Quần Jeans</a></li>
+                            <li><a href="Jeans-Trang1.html">Quần Jeans</a></li>
                             <li><a href="#">Quần Tây</a> </li>
                             <li><a href="#">Quần Taki</a></li>
                             <li><a href="#">Quần Short</a></li>
-                            <li><a href="#">Quần Jogger</a></li>
                         </ul>
                     </li>
                     <li class="sub">
                         <a href="javascript:void(0);">Áo Nam <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                         <ul class="menusub">
-                            <li><a href="#">Áo Khoác</a></li>
+                            <li><a href="ao-khoac-nam.html">Áo Khoác</a></li>
                             <li><a href="#">Áo Thun</a> </li>
                             <li><a href="#">Áo Polo</a></li>
                             <li><a href="#">Áo Vest</a></li>
@@ -67,7 +67,6 @@
                     <li class="sub">
                         <a href="javascript:void(0);">Phụ Kiện <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                         <ul class="menusub">
-                            <li><a href="#">Dây Chuyền</a></li>
                             <li><a href="#">Thắt Lưng</a> </li>
                             <li><a href="#">Ví Da</a></li>
                             <li><a href="#">Nơ</a></li>
@@ -78,7 +77,6 @@
                     <li class="sub">
                         <a href="javascript:void(0);">Giày Dép <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                         <ul class="menusub">
-                            <li><a href="#">Giày Sandal</a></li>
                             <li><a href="#">Giày Da</a></li>
                             <li><a href="#">Dép Nam</a></li>
                         </ul>
@@ -139,17 +137,17 @@
                 <span>QUẦN JEANS NAM</span>
                 <div class="List">
                     <ul>
-                        <li class="sub-jean">
+                        <li class="sub-product">
                             <a href="#">Lọc danh sách</a> 
-                            <ul class="menu-jean">
+                            <ul class="menu-product">
                                 <li><a href="#">Quần Jean Skinny Nam</a></li>
                                 <li><a href="#">Quần Jean Rách Nam</a></li>
                                 <li><a href="#">Quần Jean Nam Ống Đứng</a></li>
                             </ul>
                         </li>
-                        <li class="sub-jean">
+                        <li class="sub-product">
                             <a href="#">Sắp Xếp:<span> Mặc định</span></a>
-                            <ul class="menu-jean">
+                            <ul class="menu-product">
                                 <li><a href="#">Mặc định</a></li>
                                 <li><a href="#">Mới nhất</a></li>
                                 <li><a href="#">Xem nhiều</a></li>
@@ -158,39 +156,38 @@
                                 <li><a href="#">Giá tăng dần</a></li>
                             </ul>
                         </li>
-                        <li class="sub-jean">
+                        <li class="sub-product">
                             <a class="icon-list" href="#" title="Xem dưới dạng lưới"><i class="fa fa-th-large" aria-hidden="true"></i></a>
                         </li>
-                        <li class="sub-jean">
+                        <li class="sub-product">
                             <a class="icon-list" href="#" title="Xem dưới dạng list"><i class="fa fa-list" aria-hidden="true"></i></a>
                         </li>
                     </ul>
-                    
                 </div>
             </div>
-            <div class="jeans">
-                <div class="jean">
+            <div class="Products">
+                <div class="product">
                     <div class="image-product">
-                        <a href="#"><img src="./images/Quần Jean/QJ1666_Grey.jpg" id="mainImg1" alt=""></a>
+                        <a href="#"><img src="./images/Quần Jean/QJ1666_Grey.jpg" id="mainImg-1" alt=""></a>
                         <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
                     </div>
-                    <div class="colors1">
-                        <div class="color1">
+                    <div class="colors products-1">
+                        <div class="color">
                             <a href="#"><img src="./images/Quần Jean/QJ1666_Grey.jpg" alt=""></a>
                         </div>
-                        <div class="color1">
+                        <div class="color">
                             <a href="#"><img src="./images/Quần Jean/QJ1666_Grey_nhat.jpg" alt=""></a>
                         </div>
                     </div>
                     <div class="comment">
-                        <h6>Quần Jean Slimfit QJ1666 Màu Xám Chuột Đậm</h6>
+                        <h4>Quần Jean Slimfit QJ1666 Màu Xám Chuột Đậm</h4>
                         <div class="price">
                             <div class="money-discout">450.000 VND <span>500.000 VND</span></div>
                         </div>
                     </div>
                     <div class="discout">- 10%</div>
                 </div>
-                <div class="jean">
+                <div class="product">
                     <div class="image-product">
                         <a href="#"><img src="./images/Quần Jean/QJ685.jpg"  alt=""></a>
                         <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
@@ -201,13 +198,13 @@
                         </div>
                     </div>
                     <div class="comment">
-                        <h6>Quần Jean Slimfit QJ685 Màu Đen</h6>
+                        <h4>Quần Jean Slimfit QJ685 Màu Đen Nhạt</h4>
                         <div class="price">
                             <div class="money">550.000 VND</div>
                         </div>
                     </div>
                 </div>
-                <div class="jean">
+                <div class="product">
                     <div class="image-product">
                         <a href="#"><img src="./images/Quần Jean/QJ006.png" alt=""></a>
                         <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
@@ -218,13 +215,13 @@
                         </div>
                     </div>
                     <div class="comment">
-                        <h6>Quần Jeans Căn Bản Form Slimfit QJ006 Màu Xanh</h6>
+                        <h4>Quần Jeans Căn Bản Form Slimfit QJ006 Màu Xanh</h4>
                         <div class="price">
                             <div class="money">575.000 VND</div>
                         </div>
                     </div>
                 </div>
-                <div class="jean">
+                <div class="product">
                     <div class="image-product">
                         <a href="#"><img src="./images/Quần Jean/QJ1676.png" alt=""></a>
                         <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
@@ -235,14 +232,14 @@
                         </div>
                     </div>
                     <div class="comment">
-                        <h6>Quần Jean Rách Rã Ống Sau QJ1676 Màu Xám Xanh</h6>
+                        <h4>Quần Jean Rách Rã Ống Sau QJ1676 Màu Xám Xanh</h4>
                         <div class="price">
                             <div class="money-discout">480.000 VND <span>600.000 VND</span></div>
                         </div>
                     </div>
                     <div class="discout">- 20%</div>
                 </div>
-                <div class="jean">
+                <div class="product">
                     <div class="image-product">
                         <a href="#"><img src="./images/Quần Jean/QJ1657.jpg" alt=""></a>
                         <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
@@ -253,13 +250,13 @@
                         </div>
                     </div>
                     <div class="comment">
-                        <h6>Quần Jean Rách Gối Cắt Lai QJ1657</h6>
+                        <h4>Quần Jean Rách Gối Cắt Lai QJ1657</h4>
                         <div class="price">
                             <div class="money">600.000 VND</div>
                         </div>
                     </div>
                 </div>
-                <div class="jean">
+                <div class="product">
                     <div class="image-product">
                         <a href="#"><img src="./images/Quần Jean/QJ1674.jpg" alt=""></a>
                         <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
@@ -270,13 +267,13 @@
                         </div>
                     </div>
                     <div class="comment">
-                        <h6>Quần Jean Rách Gối QJ1674 Màu Xám Xanh</h6>
+                        <h4>Quần Jean Rách Gối QJ1674 Màu Xám Xanh</h4>
                         <div class="price">
                             <div class="money">450.000 VND</div>
                         </div>
                     </div>
                 </div>
-                <div class="jean">
+                <div class="product">
                     <div class="image-product">
                         <a href="#"><img src="./images/Quần Jean/QJ1655.jpg" alt=""></a>
                         <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
@@ -287,13 +284,13 @@
                         </div>
                     </div>
                     <div class="comment">
-                        <h6>Quần Jean Rách Cắt Lai In Chữ QJ1655</h6>
+                        <h4>Quần Jean Rách Cắt Lai In Chữ QJ1655</h4>
                         <div class="price">
                             <div class="money">450.000 VND</div>
                         </div>
                     </div>
                 </div>
-                <div class="jean">
+                <div class="product">
                     <div class="image-product">
                         <a href="#"><img src="./images/Quần Jean/QJ001.png" alt=""></a>
                         <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
@@ -304,13 +301,13 @@
                         </div>
                     </div>
                     <div class="comment">
-                        <h6>Quần Jean Form Slimfit QJ001 Màu Xanh</h6>
+                        <h4>Quần Jean Form Slimfit QJ001 Màu Xanh</h4>
                         <div class="price">
                             <div class="money">475.000 VND</div>
                         </div>
                     </div>
                 </div>
-                <div class="jean">
+                <div class="product">
                     <div class="image-product">
                         <a href="#"><img src="./images/Quần Jean/QJ1659.jpg" alt=""></a>
                         <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
@@ -321,13 +318,13 @@
                         </div>
                     </div>
                     <div class="comment">
-                        <h6>Quần Jean Túi Mố Slim-Cropped QJ1659</h6>
+                        <h4>Quần Jean Túi Mố Slim-Cropped QJ1659</h4>
                         <div class="price">
                             <div class="money">445.000 VND</div>
                         </div>
                     </div>
                 </div>
-                <div class="jean">
+                <div class="product">
                     <div class="image-product">
                         <a href="#"><img src="./images/Quần Jean/QJ1658.jpg" alt=""></a>
                         <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
@@ -338,13 +335,13 @@
                         </div>
                     </div>
                     <div class="comment">
-                        <h6>Quần Jean Slim Cropped QJ1658 Màu Trắng</h6>
+                        <h4>Quần Jean Slim Cropped QJ1658 Màu Trắng</h4>
                         <div class="price">
                             <div class="money">390.000 VND</div>
                         </div>
                     </div>
                 </div>
-                <div class="jean">
+                <div class="product">
                     <div class="image-product">
                         <a href="#"><img src="./images/Quần Jean/QJ002.png" alt=""></a>
                         <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
@@ -355,13 +352,13 @@
                         </div>
                     </div>
                     <div class="comment">
-                        <h6>Quần Jean Rách Gối QJ002 Màu Xanh</h6>
+                        <h4>Quần Jean Rách Gối QJ002 Màu Xanh</h4>
                         <div class="price">
                             <div class="money">475.000 VND</div>
                         </div>
                     </div>
                 </div>
-                <div class="jean">
+                <div class="product">
                     <div class="image-product">
                         <a href="#"><img src="./images/Quần Jean/QJ003.jpg" alt=""></a>
                         <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
@@ -372,7 +369,7 @@
                         </div>
                     </div>
                     <div class="comment">
-                        <h6>Quần Jeans Rách Gối QJ003 Màu Đen</h6>
+                        <h4>Quần Jeans Rách Gối QJ003 Màu Đen</h4>
                         <div class="price">
                             <div class="money">445.000 VND</div>
                         </div>
@@ -383,8 +380,8 @@
         <section class="page">
             <div class="page_nav">
                 <ul class="page">
-                    <li class="number"><a href="#">1</a></li>
-                    <li class="number"><a href="#" class="active">2</a></li>
+                    <li class="number"><a href="Jeans-Trang1.html">1</a></li>
+                    <li class="number"><a href="Jeans-Trang2.html" class="active">2</a></li>
                     <li class="number"><a href="#">3</a></li>
                     <li class="number"><a href="#">Tới <span class="iconToi"><i class="fa fa-angle-double-right" aria-hidden="true"></i></span></a></li>
                     <li class="number"><a href="#">Trang cuối <span class="iconToi"><i class="fa fa-angle-double-right" aria-hidden="true"></i></span></a></li>
@@ -507,9 +504,7 @@
                 </li>
             </ul>
         </section>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js" integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>           
-        <script src="./js/carousel.js"></script>
+       
         <script>
             $(document).ready(function(){
                 $('#mobile-menu').click(function(){
@@ -522,6 +517,13 @@
 
                 $('#Contact').click(function(){
                     $('#contact-list').slideToggle();
+                })
+            })
+
+            $(document).ready(function(){
+                $("ul.page a").click(function() {
+                    $("ul.page a").removeClass("active")
+                    $(this).addClass("active")
                 })
             })
         </script>

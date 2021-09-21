@@ -79,7 +79,10 @@
         font-size: 10px;
     }
     
-    div.item > img,
+    div.item > img{
+        height: 300px;
+    }
+
     div.color{
         height: 400px;
     }

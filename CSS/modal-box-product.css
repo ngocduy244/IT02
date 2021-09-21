@@ -1,0 +1,132 @@
+.modal-box{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0 , 0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.modal-box.open{
+    display: flex;
+}
+
+.modal-container{
+    background-color: #fff;
+    width: 1000px;
+    position: relative; 
+    padding: 30px;
+    animation: modalFadeIn ease 1s;
+}
+
+.modal-container > .close{
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+.modal-container > .close a{
+    color: #000;
+}
+
+.modal-box  .body{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.modal-box  .body .modal-image img{
+    max-width: 100%;
+}
+
+.modal-box  .body  .modal-image{
+    width: 50%;
+    padding: 0 10px;
+}
+
+.modal-box  .body  .modal-information{
+    width: 50%;
+}
+
+.modal-information .title{
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.modal-information .condition{
+    font-size: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
+}
+
+.modal-information .amount{
+    font-size: 10px;
+    padding: 10px 0;
+}
+
+.modal-information .cart{
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin: 10px 0;
+}
+
+.modal-information .cart ul{
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-information .cart ul li{
+     cursor: pointer;
+}
+
+.cart > ul > li.dangKy{
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+} 
+
+.cart > ul > li.dangKy:hover{
+    opacity: 0.9;
+}
+
+.modal-information .btn a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn{
+    border: 1px solid #000;
+    width: 100%;
+    background-color: #b9b9b9;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.modal-information .btn:hover a{
+    opacity: 0.5;
+}
+
+.modal-information input[type="button"]{
+    width: 100%;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

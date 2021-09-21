@@ -10,7 +10,7 @@ body{
 /*Nav Logo*/
 #logo img{
     width: 100%;
-    max-height: 300px;
+    max-height: 400px;
 }
 
 /*ads*/
@@ -59,14 +59,10 @@ div.filtering > div{
 }
 .BS img{
     width: 100%;
-    transition: transform 1s;
+    transition: opacity 1s;
 }
 div.BS:hover img{
-    transform: scale(1.2);
-    opacity: 0.7;
-}
-div.BS > div{
-    overflow: hidden;
+    opacity: 0.5;
 }
 
 div.comment-top .name{
@@ -124,33 +120,27 @@ div.label{
 .product img{
     width: 100%;
     min-height: 400px;
-    transition: transform 1s;
+    transition: opacity 1s;
     border-radius: 5px 5px 0 0;
-}
-
-div.product > div{
-    overflow: hidden;
 }
 
 div.comment{
     margin: 10px 0 0;
 }
 
+div.comment > h6{
+    margin: 0;
+}
+
 .price .money{
-    width: 100%;
-    border-radius: 0 0 5px 5px;
-    background-color: #FAEBD7;
-    border-top: 1px solid #000;
+   font-size: 14px;
+   font-weight: bold;
+   margin-bottom: 5px;
 }
 
 div.product:hover img{
-    transform: scale(1.2);
-    opacity: 0.7;
+    opacity: 0.5;
 }
-
-.price > div{
-    padding: 10px;
-} 
 
 div.xem > a{
     font-size: 15px;

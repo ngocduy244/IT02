@@ -1,0 +1,55 @@
+.modal-box{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0 , 0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.modal-box.open{
+    display: flex;
+}
+
+.modal-container{
+    background-color: #fff;
+    width: 500px;
+    position: relative; 
+    padding: 20px;
+    animation: modalFadeIn ease 1s;
+}
+
+.modal-header,
+.modal-body{
+    border-bottom: 1px solid #ccc;
+}
+
+li > span{
+    font-weight: bold;
+    color: #666;
+    font-size: 20px;
+}
+
+div.dc{
+    padding: 20px 0;
+}
+
+div.dc > ul{
+    list-style-type: square;
+}
+
+.modal-foot input[type="button"]{
+    margin-top: 10px;
+    background-color: red;
+    float: right;
+    padding: 5px 10px;
+}
+
+.modal-foot:hover input{
+    opacity: 0.7;
+    background-color: #ccc;
+}

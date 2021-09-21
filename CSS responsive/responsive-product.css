@@ -10,26 +10,16 @@
         width: 100%;
     }
 
-    div.jean h6{
-        font-size: 15px;
-    }
-
-    div.jean div{
-        overflow: hidden;
+    div.product h4{
         font-size: 14px;
     }
 
-    div.jean span{
-        font-size: 9px;
+    div.product span{
+        font-size: 11px;
     }
 
     .list ul li a.icon-list{
         display: none;
-    }
-
-
-    .price .money{
-        padding: 10px 0 5px;
     }
 }
 
@@ -44,13 +34,13 @@
     .carousel-inner img{
         height: 200px;
     }
-    /*menu jean*/
+    /*menu product*/
     .title > span{
         font-size: 17px;
-        padding: 5px;
+        padding: 5px 5px 0;
     }
 
-    .List ul li.sub-jean a{
+    .List ul li.sub-product a{
         font-size: 10px;
         padding: 5px;
     } 
@@ -64,44 +54,42 @@
         width: 100%;
     }
 
-    div.jeans{
+    div.Products{
         margin-top: 10px;
     }
 
-    div.jean{
+    div.product{
         width: 48%;
         margin: 3px;
     }
 
-    div.jean img{
+    div.product img{
         max-height: 250px;
     }
 
-    div.jean div{
+    div.product div{
         overflow: hidden;
         font-size: 11px;
     }
 
-    div.jean h6{
-        font-size: 12px;
-        font-weight: 700;
+    div.product h4{
+        font-size: 11px;
     }
 
-    div.jean span{
-        font-size: 8px;
-    }
-
-    .price .money,
-    .price .money-discout{
-        padding: 10px 0 5px;
-    }
-
-    div.label, .label-discout, .discout{
+   
+    div.label-new, .label-discout, .discout{
         padding: 5px 10px;
     }
 
     div.label-discout{
         margin-top: 30px;
+    }
+
+    .price .money, .price .money-discout{
+        font-size: 10px;
+    }
+    div.product .money-discout > span{
+        font-size: 9px;
     }
 
     /*section page*/
