@@ -5,11 +5,11 @@ $('.filtering').slick({
   slidesToShow: 3,
   responsive: [
     {
-      breakpoint: 768,
+      breakpoint: 769,
       settings: {
         arrows: false,
         centerMode: true,
-        centerPadding: '40px',
+        centerPadding: '30px',
         slidesToShow: 3
       }
     },

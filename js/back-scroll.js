@@ -8,7 +8,7 @@ $(document).ready(function() {
                 "position": "fixed",
                 "left": "0",
                 "right": "0",
-                "z-index": "100",
+                "z-index": "1000",
                 "top": "0"
             })
         }
@@ -25,7 +25,7 @@ $(document).ready(function() {
     })
 
     $("#top").click(function(){
-        $("html, body").animate({
+        $('html, body').animate({
             scrollTop: 0
         }, 500);
     })

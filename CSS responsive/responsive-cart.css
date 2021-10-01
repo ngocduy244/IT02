@@ -13,14 +13,21 @@
     }
 
     /*Right*/
+
+    table tr th{
+        font-size: 15px;
+        padding: 5px;
+    }
+
     .product-list{
         font-size: 11px;
     }
 
+    table td,
     td.name{
-        font-weight: bold;
-        font-size: 12px;
+        font-size: 14px;
     }
+    
 
 }
 

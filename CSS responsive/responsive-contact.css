@@ -1,0 +1,117 @@
+@media (min-width: 740px) and (max-width: 1023px){
+    .contact-body{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .contact-body .contact-main{
+        width: 100%;
+    }
+
+    .contact-body .contact-main .like-share{
+        padding-left: 30px;
+    }
+
+    /* Product */
+
+    div.filtering > div{
+        height: 350px;
+    }
+
+    .BestSeller{
+        padding: 10px;
+        width: 95%;
+    }
+
+    .slick-prev::before, .slick-next::before{
+        display: none;
+    }
+
+    div.comment-top .name{
+        font-size: 18px;
+    }
+
+
+    /* Blog */
+    .blog > h4{
+        padding-left: 20px;
+        font-weight: bold;
+    }
+
+    div.Blog-sub{
+        width: 48%;
+    }
+
+    /* sub */
+    .contact-body .contac-sub{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .search-sub{
+        width: 100%;
+    }
+
+    .search-sub input{
+        width: 95%;
+    }
+}
+
+@media (max-width: 739px){
+    .contact-body{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .contact-body .contact-main{
+        width: 100%;
+    }
+
+    .contact-body .contact-main .like-share{
+        padding-left: 30px;
+    }
+
+    /* Product */
+
+    div.filtering > div{
+        height: 280px;
+    }
+
+    .BestSeller{
+        padding: 10px;
+        width: 95%;
+    }
+
+    .slick-prev::before, .slick-next::before{
+        display: none;
+    }
+
+    div.comment-top .name{
+        font-size: 14px;
+    }
+
+
+    /* Blog */
+    .blog > h4{
+        padding-left: 20px;
+        font-weight: bold;
+    }
+
+    div.Blog-sub{
+        width: 90%;
+    }
+
+    /* sub */
+    .contact-body .contac-sub{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .search-sub{
+        width: 100%;
+    }
+
+    .search-sub input{
+        width: 95%;
+    }
+}

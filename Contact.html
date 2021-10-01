@@ -6,63 +6,76 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="refresh" content="200">
+        <!--JavaScript-->
         <script src="https://kit.fontawesome.com/cb149d0c94.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <link rel="shortcut icon" href="./images/logo/logo-2.png">
-        <link rel="stylesheet" href="contact.css">
+        <script src="./js/jquery-3.6.0.min.js"></script>
+        <script src="./js/back-scroll.js"></script>
+        <!--CSS-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="shortcut icon" href="./images/Logo/logo-2.png">
+        <link rel="stylesheet" href="./CSS/menu-foot-imgProduct.css">
+        <link rel="stylesheet" href="./CSS/contact.css">
+        <link rel="stylesheet" href="./CSS responsive/responsive-menu-foot.css">
+        <link rel="stylesheet" href="./CSS responsive/responsive-contact.css">
         <title>Quần Jeans Nam</title>
     </head>
 </head>
 <body>
+    <!--header-->
     <header>
+        <div class="heading">
+            <div class="left">
+                <div class="hotline"><i class="fa fa-phone" aria-hidden="true"></i> Hotline: <span>028-38364748</span></div>
+                <div><i class="fas fa-envelope"></i> Mail: <a href="mailto: ou@ou.edu.vn">ou@ou.edu.vn</a></div>
+            </div>
+            <div class="right">
+                <div><a href="#"><i class="fas fa-store"></i> Hệ thống của hàng</a></div>
+                <div><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Thông tin</a></div>
+                <div class="question"><a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i> Hỏi đáp</a></div>
+            </div>
+        </div>
+    </header>
+       <!--Phần Menu-->
+       <nav id="Menu">
         <div class="logo">
-            <img src="/images/logo1.png" alt="">
+            <a href="index.html"><img src="./images/Logo/logo-5.png" alt=""></a>
         </div>
-        <div class="icon">
-             <div class="input">
-                <input type="text" placeholder="Tim kiem...">
-            </div>
-            <div>
-                <a href="#"> <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-            </div>
-            <div>
-                <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
-            </div>
-            <div>
-                <a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-            </div>
-        </div>
-        <div class="menu">
-            <ul class="menu">
-                <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Trang Chủ</a></li>
+
+        <!--Menu PC-->
+        <nav id="menu-list">
+            <ul id="main-menu">
+                <li><a href="javascript:void(0);">Mới Nhất</a></li>
+                   
                 <li class="sub">
-                    <a href="#">Quần Nam <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <a href="javascript:void(0);">Quần Nam <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <span class="nav-badge">Hot</span>
                     <ul class="menusub">
-                        <li><a href="#">Quần Jeans</a></li>
+                        <li><a href="Jeans-Trang1.html">Quần Jeans</a></li>
                         <li><a href="#">Quần Tây</a> </li>
                         <li><a href="#">Quần Taki</a></li>
                         <li><a href="#">Quần Short</a></li>
-                        <li><a href="#">Quần Jogger</a></li>
                     </ul>
                 </li>
                 <li class="sub">
-                    <a href="#">Áo Nam <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <a href="javascript:void(0);">Áo Nam <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <span class="nav-badge">Hot</span>
                     <ul class="menusub">
-                        <li><a href="#">Áo Khoác</a></li>
+                        <li><a href="ao-khoac-nam.html">Áo Khoác</a></li>
                         <li><a href="#">Áo Thun</a> </li>
                         <li><a href="#">Áo Polo</a></li>
                         <li><a href="#">Áo Vest</a></li>
                         <li><a href="#">Áo Sơ mi</a></li>
                     </ul>
                 </li>
-               
                 <li class="sub">
-                    <a href="#">Phụ Kiện <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <a href="javascript:void(0);">Phụ Kiện <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                     <ul class="menusub">
-                        <li><a href="#">Dây Chuyền</a></li>
                         <li><a href="#">Thắt Lưng</a> </li>
                         <li><a href="#">Ví Da</a></li>
                         <li><a href="#">Nơ</a></li>
@@ -71,43 +84,495 @@
                     </ul>
                 </li>
                 <li class="sub">
-                    <a href="#">Giày Dép <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <a href="javascript:void(0);">Giày Dép <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                     <ul class="menusub">
-                        <li><a href="#">Giày Sandal</a></li>
                         <li><a href="#">Giày Da</a></li>
                         <li><a href="#">Dép Nam</a></li>
                     </ul>
                 </li>
-                <li class="sub"><a href="#">Liên Hệ</a></li>
-             </ul>
-        </div>
-    </header>
-    <section class="body">
-        <div class="body">
-            <div class="main">
-                <h4><i class="fa fa-star" aria-hidden="true"></i> THÔNG TIN HỆ THỐNG CỬA HÀNG DIRTYCOINS</h4>
-                <div class="ND">Đăng bởi : Duy | 20/08/2021</div>
-                <div class="HT"> <h3>HỆ THỐNG CỬA HÀNG</h3></div>
-                <h5>CHI NHÁNH HỒ CHÍ MINH:</h5>
-                <div>97 Võ Văn Tần, P.6, Q.3</div>
-                <div>35-37 Hồ Hảo Hớn, P.Cô Giang, Q.1 </div>
-                <div>371 Nguyễn Kiệm, P.3, Q.Gò Vấp</div>
-                <div>02 Mai Thị Lựu, P.Đa Kao, Q.1</div>
-                <h5>CHI NHÁNH BÌNH DƯƠNG</h5>
-                <div>68 Lê Thị Trung, P.Phú Lợi, TP.Thủ Dầu Một,</div>
-                <h5>CHI NHÁNH ĐỒNG NAI</h5>
-                <div>Đường số 9, P. Long Bình Tân, TP. Biên Hòa</div>
-                <h5>CHI NHÁNH KHÁNH HÒA</h5>
-                <div>Tổ dân phố 17 P. Ninh Hiệp, Thị Xã Ninh Hòa</div>
-            </div>
-            <div class="sub">
-                <div class="search">Tìm Kiếm</div>
-                <hr>
-                <div>
-                    <input type="text" placeholder="Tìm kiếm...."><i class="fa fa-search" aria-hidden="true"></i>
+                <li class="sub"><a href="Contact.html">Liên Hệ</a></li>
+                <li class="sub">
+                    <a href="#">Tin Tức</a>
+                    <span class="nav-badge">Hot</span>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="icon-list">
+            <div class="search">
+                <div class="down">
+                    <span class="input-search"><input type="text" placeholder="Tìm kiếm..."></span>
                 </div>
+                <span class="icon-search"><i class="fa fa-search search-icon" aria-hidden="true"></i></span>
+            </div>
+
+            <div class="cart">
+                <a href="cart.html">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <span>0</span>
+                </a>
+            </div>
+            <div class="user"><a href="Create-login.html"><i class="fas fa-user"></i></a></div>
+        </div> 
+
+        <label for="check-ipad" class="navbar-ipad-btn"><i class="fa fa-bars" aria-hidden="true"></i></label>
+
+        <input type="checkbox" id="check-ipad" class="check-nav-ipad">
+
+        <label for="check-ipad" class="nav-overlay"></label>
+
+        <!--navbar-ipad-->
+        <nav class="nav-ipad">
+            <label for="check-ipad" class="navbar-ipad-close">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </label>
+
+            <ul class="menu-ipad">
+                <li><a href="index.html"><img src="./images/Logo/logo-5.png" alt=""></a></li>
+                <li>
+                    <div class="search-ipad">
+                        <input type="text" placeholder="Tìm kiếm...">
+                        <span class="icon-search-ipad"><i class="fa fa-search search-icon" aria-hidden="true"></i></span>    
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">Mới Nhất</a>
+                </li>
+                <li class="sub-menu-ipad">
+                    <a href="javascript:void(0);">Quần Nam <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <span class="nav-badge">Hot</span>
+                    <ul class="menusub-ipad">
+                        <li><a href="Jeans-Trang1.html">Quần Jeans</a></li>
+                        <li><a href="#">Quần Tây</a> </li>
+                        <li><a href="#">Quần Taki</a></li>
+                        <li><a href="#">Quần Short</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu-ipad">
+                    <a href="javascript:void(0);">Áo Nam <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <span class="nav-badge">Hot</span>
+                    <ul class="menusub-ipad">
+                        <li><a href="ao-khoac-nam.html">Áo Khoác</a></li>
+                        <li><a href="#">Áo Thun</a> </li>
+                        <li><a href="#">Áo Polo</a></li>
+                        <li><a href="#">Áo Vest</a></li>
+                        <li><a href="#">Áo Sơ mi</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu-ipad">
+                    <a href="javascript:void(0);">Phụ Kiện <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <ul class="menusub-ipad">
+                        <li><a href="#">Thắt Lưng</a> </li>
+                        <li><a href="#">Ví Da</a></li>
+                        <li><a href="#">Nơ</a></li>
+                        <li><a href="#">Cà Vạt</a></li>
+                        <li><a href="#">Mắt Kính</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu-ipad">
+                    <a href="javascript:void(0);">Giày Dép <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <ul class="menusub-ipad">
+                        <li><a href="#">Giày Da</a></li>
+                        <li><a href="#">Dép Nam</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu-ipad"><a href="Contact.html">Liên Hệ</a></li>
+                <li class="sub-menu-ipad">
+                    <a href="News.html">Tin Tức</a>
+                    <span class="nav-badge">Hot</span>
+                </li>
+                <li class="sub-menu-ipad"><a href="Create-login.html">Đăng ký / đăng nhập</a></li>
+            </ul>
+        </nav>
+
+        <!--Menu mobile-->
+        <div class="navBar-mobile">
+            <ul class="mobile-menu-list">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <p>Sản phẩm mới</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-tags" aria-hidden="true"></i>
+                        <p>Khuyến mãi</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <p>Cửa hàng</p>
+                    </a>
+                </li>
+                <li id="mobile-menu" class="mobile-menu-btn">
+                    <a href="javascript:void(0);">
+                        <label for="check">
+                            <i class="fas fa-bars"></i>
+                            <p>Menu</p>
+                        </label>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <input type="checkbox" id="check" class="nav-input">
+
+        <nav class="nav-mobile">
+            <ul class="menu-mobile">
+                <li>
+                    <a href="javascript:void(0);">Mới Nhất</a>
+                </li>
+                <li class="sub-menu-mobile">
+                    <a href="javascript:void(0);">Quần Nam <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <span class="nav-badge">Hot</span>
+                    <ul class="menusub-mobile">
+                        <li><a href="Jeans-Trang1.html">Quần Jeans</a></li>
+                        <li><a href="#">Quần Tây</a> </li>
+                        <li><a href="#">Quần Taki</a></li>
+                        <li><a href="#">Quần Short</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu-mobile">
+                    <a href="javascript:void(0);">Áo Nam <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <span class="nav-badge">Hot</span>
+                    <ul class="menusub-mobile">
+                        <li><a href="ao-khoac-nam.html">Áo Khoác</a></li>
+                        <li><a href="#">Áo Thun</a> </li>
+                        <li><a href="#">Áo Polo</a></li>
+                        <li><a href="#">Áo Vest</a></li>
+                        <li><a href="#">Áo Sơ mi</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu-mobile">
+                    <a href="javascript:void(0);">Phụ Kiện <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <ul class="menusub-mobile">
+                        <li><a href="#">Thắt Lưng</a> </li>
+                        <li><a href="#">Ví Da</a></li>
+                        <li><a href="#">Nơ</a></li>
+                        <li><a href="#">Cà Vạt</a></li>
+                        <li><a href="#">Mắt Kính</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu-mobile">
+                    <a href="javascript:void(0);">Giày Dép <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <ul class="menusub-mobile">
+                        <li><a href="#">Giày Da</a></li>
+                        <li><a href="#">Dép Nam</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu-mobile"><a href="Contact.html">Liên Hệ</a></li>
+                <li class="sub-menu-mobile">
+                    <a href="News.html">Tin Tức</a>
+                    <span class="nav-badge">Hot</span>
+                </li>
+                <li class="sub-menu-mobile">
+                    <a href="News.html">Khuyến Mãi</a>
+                    <span class="nav-badge">Hot</span>
+                </li>
+                <li class="sub-menu-mobile"><a href="Create-login.html">Đăng ký / đăng nhập</a></li>
+                <li class="sub-menu-mobile"><a href="Contact.html">Hệ Thống Cửa Hàng</a></li>
+            </ul>
+        </nav>
+
+    </nav>
+    <section class="contact">
+        <div class="contact-body">
+            <div class="contact-main">
+                <h4><i class="fa fa-star" aria-hidden="true"></i> THÔNG TIN HỆ THỐNG CỬA HÀNG OU&D</h4>
+                <div>Đăng bởi : Duy | 20/08/2021</div>
+                <h3>HỆ THỐNG CỬA HÀNG</h3>
+                <ul>
+                    <li>
+                        <span>CHI NHÁNH HỒ CHÍ MINH:</span>
+                        <ul>
+                            <li>97 Võ Văn Tần, P.6, Q.3</li>
+                            <li>35-37 Hồ Hảo Hớn, P.Cô Giang, Q.1</li>
+                            <li>371 Nguyễn Kiệm, P.3, Q.Gò Vấp</li>
+                            <li>02 Mai Thị Lựu, P.Đa Kao, Q.1</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>CHI NHÁNH BÌNH DƯƠNG</span>
+                        <ul>
+                            <li>68 Lê Thị Trung, P.Phú Lợi, TP.Thủ Dầu Một</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>CHI NHÁNH ĐỒNG NAI</span>
+                        <ul>
+                            <li>Đường số 9, P. Long Bình Tân, TP. Biên Hòa</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>CHI NHÁNH KHÁNH HÒA</span>
+                        <ul>
+                            <li>Tổ dân phố 17 P. Ninh Hiệp, Thị Xã Ninh Hòa</li>
+                        </ul>
+                    </li>
+                    <li>
+                        028-39207639 - 028-39207640
+                    </li>
+                    <li>
+                        ou@ou.edu.vn
+                    </li>
+                </ul>
+                <div class="like-share">
+                    <div>Thích và chia sẻ bài viết</div>
+                    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FOUD-108938628159840%2F%3Fref%3Dpages_you_manage&width=138&layout=button&action=like&size=large&share=true&height=65&appId" width="138" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                </div>
+
+                <section class="BestSeller">
+                    <h2>CÓ THỂ SẢN PHẨM BẠN ĐANG TÌM KIẾM Ở ĐÂY</h2>
+                    <div class="filtering">
+                        <div class="BS">
+                            <div class="image-product">
+                                <a href="#"><img src="./images/BestSeller/BS1_QS.jpg" alt=""></a>
+                                <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                            </div>
+                            <div class="comment-top">
+                                <div class="name">Quần Short Nỉ Thuê QS013</div>
+                                <div class="money">245.000 VND</div>
+                            </div>
+                            <div class="label">NEW</div>
+                        </div>
+                        <div class="BS">
+                            <div class="image-product">
+                               <a href="#"><img src="./images/BestSeller/BS2_AOK.jpg" alt=""></a>
+                               <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                            </div>
+                            <div class="comment-top">
+                                <div class="name">Áo Khoác Dù 3 Lớp Đen AK195</div>
+                                <div class="money">275.000VND</div>
+                            </div>
+                            <div class="label">NEW</div>
+                        </div>
+                        <div class="BS">
+                            <div class="image-product">
+                                <a href="#"><img src="./images/BestSeller/BS6_CV.png" alt=""></a>
+                               <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                            </div>
+                            <div class="comment-top">
+                                <div class="name">Cavat Họa Tiết CV016 Màu Xám</div>
+                                <div class="money">145.000 VND</div>
+                            </div>
+                        </div>   
+                        <div class="BS">
+                            <div class="image-product">
+                                <a href="#"><img src="./images/BestSeller/BS5_AV.jpg" alt=""></a>
+                               <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                            </div>
+                            <div class="comment-top">
+                                <div class="name">Áo Vest NAZAFU AV1139</div>
+                                <div class="money">1.350.000 VND</div>
+                            </div>
+                            <div class="label">NEW</div>
+                        </div>
+                        <div class="BS">
+                            <div class="image-product">
+                                <a href="#"><img src="./images/BestSeller/BS4_QJ.png" alt=""></a>
+                               <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                            </div>
+                            <div class="comment-top">
+                                <div class="name">Quần Jogger Lưng Thun Cài Nút J004</div>
+                                <div class="money">300.000 VND</div>
+                            </div> 
+                        </div>
+                        <div class="BS">
+                            <div class="image-product">
+                                <a href="#"><img src="./images/BestSeller/BS3_AT.png" alt=""></a>
+                                <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                            </div>
+                            <div class="comment-top">
+                                <div class="name">Áo Thun Tay Dài Thêu Works AT039</div>
+                                <div class="money">220.000 VND</div>
+                            </div>
+                            <div class="label">NEW</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!--Blog-->
+                <section class="blog">
+                    <h4>BÀI VIẾT LIÊN QUAN</h4>
+                    <div class="Blog">
+                        <div class="Blog-sub">
+                            <div><a href="#"><img src="./images/Blog/blog10.jpg" alt="Tạp chí" targ></a></div>
+                            <div class="title">FREE LIFE | FALL WINTER COLLECTION 2020</div>
+                            <div class="content">
+                                <p>Khoác lên mình các gam màu trầm nhưng không tĩnh, BST Thu Đông 2020 từ 4MEN mang thông ...</p>
+                            </div>
+                        </div>
+                        <div class="Blog-sub">
+                            <div><a href="#"><img src="./images/Sale/sale-1.jpg" alt=""></a></div>
+                            <div class="title">HAPPY 11TH BIRTHDAY - TRI ÂN ĐẾN 26%</div>
+                            <div class="content">
+                                <p>Mừng sinh nhật 11 tuổi, 4MEN "mở tiệc" tri ân lên đến 26% cùng BEST DEAL CHỈ 11K ...</p>
+                            </div>
+                        </div>
+                        <div class="Blog-sub">
+                            <div><a href="#"><img src="./images/Sale/sale-2.png" alt=""></a></div>
+                            <div class="title">XUÂN TÂN SỬU - VUI DEAL ĐÓN TẾT</div>
+                            <div class="content">
+                                <p>Sắm Tết vui phết với ưu đãi đồng giá chỉ từ 99K đến 50%++. Nhanh tay sở hữu ...</p>
+                            </div>
+                        </div>
+                        <div class="Blog-sub">
+                            <div><a href="#"><img src="./images/Blog/blog7.png" alt=""></a></div>
+                            <div class="title">COTTON 100% - CHẤT LIỆU ĐI CÙNG “THỜI TRANG XANH”</div>
+                            <div class="content">
+                                <p>Chất liệu cotton 100% có những ưu điểm gì? 4MEN đã ứng dụng loại vải tuyệt vời này trong sản ...</p>
+                            </div>
+                        </div>
+                        <div class="Blog-sub">
+                            <div><a href="#"><img src="./images/Sale/sale-3.png" alt=""></a></div>
+                            <div class="title">Ở NHÀ KHÔNG CHÁN - SALE UPTO 70%</div>
+                            <div class="content">
+                                <p>Mùa "cô vi" này, cùng 4MEN đánh tan 'muộn phiền' với ƯU ĐÃI ĐẾN 70% từ ngày 23.08 ...</p>
+                            </div>
+                        </div>
+                        <div class="Blog-sub">
+                            <div><a href="#"><img src="./images/Blog/blog12.png" alt=""></a></div>
+                            <div class="title">COMBO OFFERS - Ở NHÀ KHÔNG CHÁN</div>
+                            <div class="content">
+                                <p>Sở hữu ngay combo BASIC TEE với giá SIÊU TIẾT KIỆM, cùng 4MEN truyền cảm hứng lạc quan  ...</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <div class="contac-sub">
+                <h4>Tìm Kiếm</h4>
+                <div class="search-sub">
+                    <input type="text" placeholder="Tìm kiếm....">
+                    <span><i class="fa fa-search search-icon" aria-hidden="true"></i></span>
+                </div>
+                <ul>
+                    <li><a href="#">BÍ KÍP “BIẾN HÌNH” THEO TỪNG DÁNG NGƯỜI CÙNG STREETWEAR CHO NAM (P1)</a></li>
+                    <li><a href="#">ÁO CROPTOP - ITEM XỨNG ĐÁNG CÓ TRONG TỦ ĐỒ CỦA GEN Z</a></li>
+                    <li><a href="#">ÁO KHOÁC CARDIGAN: BẢN PHỐI TƯƠI TRẺ LẪN HOÀI NIỆM CHO GEN Z</a></li>
+                    <li><a href="#">COMBO OFFERS - Ở NHÀ KHÔNG CHÁN</a></li>
+                    <li><a href="#">BOOMING TỪ 79K - THÍCH LÀ MÌNH SALE THÔI</a></li>
+                    <li><a href="#">LỄ HỘI THÀNH VIÊN: CÓ THẺ TRONG TAY NHẬN NGAY ƯU ĐÃI</a></li>
+                    <li><a href="#">2/12 - KHAI TRƯƠNG CỬA HÀNG RẠCH GIÁ - KIÊN GIANG</a></li>
+                    <li><a href="#">CHÍNH SÁCH BẢO MẬT</a></li>
+                    <li><a href="#">THÔNG TIN HỆ THỐNG CỬA HÀNG OU&D</a></li>
+                </ul>
             </div>
         </div>
     </section>
+
+    <!--Phone-->
+    <section class="phone">
+        <div class="phone">
+            <i class="fa fa-phone-square" aria-hidden="true"></i> Hỗ trợ / Mua hàng: <span>028-38364748</span> 
+        </div>
+    </section>
+    <!--BACK-->
+    <section class="back">
+        <a id="top" href="javascript:;">
+            <div><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
+            <div class="text">TOP</div>
+        </a>
+    </section>
+    <!--Introduce Shop-->
+    <section class="introduce-shop">
+        <h2>Giới thiệu</h2>
+        <div class="letter">OU&D xuất hiện trên thị trường từ đầu năm 1990, 
+            OU&D mang sức mạnh của một thương hiệu local brand 
+            đầy cá tính với những sản phẩm thời trang hàng đầu xu thế.
+            OU&D thực chất là một cách lồng ghép khéo léo về sự 
+            đời của thương hiệu. Với sức hút của mình, OU&D 
+            trở thành biểu tượng cho phong cách thời 
+            trang mạnh mẽ, táo bạo, và được ưa chuộng rộng rãi. 
+            OU&D mang đến một cái góc độ độc đáo không những 
+            về phong cách sống mà còn về gout ăn mặc hiện đại. 
+            OU&D nhận thức được nhu cầu đang phát triển của 
+            thị trường Streetwear Việt Nam. Những mặt hàng thời 
+            trang tại OU&D được thiết kế với sự kết hợp văn 
+            hoá Châu Á và Châu Âu, tạo ra phong cách độc đáo và mới 
+            mẻ. Bên cạnh đó ,với sự phá cách từ tông màu trắng đen, 
+            tông màu chủ đạo của đa số dòng thời trang Streetwear, 
+            các mẫu thời trang tại OU&D mang nhiều màu sắc
+            phong phú. Đây là cách OU&D mang đến giá trị 
+            cho cộng đồng trẻ yêu thích Streetwear, khuyến khích 
+            họ mạo hiểm trong gu ăn mặc của mình. Với tính cách mạo 
+            hiểm, không ngại rủi ro, OU&D dần mở rộng thị trường 
+            trong suốt quá trình phát triển các chi nhánh trên toàn quốc, 
+            đem tới một nền văn hoá rất riêng của OU&D.
+        </div>
+    </section>
+    <!--Footer-->
+    <footer>
+        <div class="foot">
+            <div class="address">
+                <h4 id="mobile-list-store"><i class="fa fa-angle-down" aria-hidden="true"></i> Hệ thống cửa hàng</h4>
+                <div id="list-store">
+                    <div><i class="fa fa-map-marker" aria-hidden="true"> Chi Nhánh Hồ Chí Minh</i></div>
+                    <div><b>Quận 1:</b> 35-37 Hồ Hảo Hớn, Phường Cô Giang</div>
+                    <div><b>Quận 1:</b> 02 Mai Thị Lựu, Phường Đa Kao</div>
+                    <div><b>Quận 3:</b> 97 Võ Văn Tần, Phường 6</div>
+                    <div><b>Quận Gò Vấp:</b> 371 Nguyễn Kiệm, Phường 3</div>
+                    <div><i class="fa fa-map-marker" aria-hidden="true"> Chi Nhánh Bính Dương</i></div>
+                    <div><b>TP.Thủ Dầu Một:</b> 68 Lê Thị Trung, Phường Phú Lợi</div>
+                    <div><i class="fa fa-map-marker" aria-hidden="true"> Chi Nhánh Đồng Nai</i></div>
+                    <div><b>TP.Biên Hòa:</b> Đường số 9, Phường Long Bình Tân</div>
+                    <div><i class="fa fa-map-marker" aria-hidden="true"> Chi Nhánh Khánh Hòa</i></div>
+                    <div><b>Khánh Hòa:</b> Tổ dân phố 17, Phường Ninh Hiệp, Thị Xã Ninh Hòa</div>
+                </div>
+                <h4 id="Contact"><i class="fa fa-angle-down" aria-hidden="true"></i> Thông tin liên hệ</h4>
+                <div id="contact-list">
+                    <div><i class="fa fa-phone" aria-hidden="true"></i> 028-38364748</div>
+                    <div><i class="fa fa-fax" aria-hidden="true"></i> 028-39207639 hoặc 028-39207640.</div>
+                    <div class="email">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <a href="mailt to: ou@ou.edu.vn">ou@ou.edu.vn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ggmap">
+                <h4>Địa chỉ cửa hàng trên Google Map</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62707.56165213032!2d106.6811510112395!3d10.794255675549682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528e1f241211f%3A0xc9ef195798144b1f!2sHo%20Chi%20Minh%20City%20Open%20University!5e0!3m2!1sen!2s!4v1628665788362!5m2!1sen!2s" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="social-media">
+                <h4>Mạng xã hội</h4>
+                <div class="icon-media">
+                    <div><a href="#"><img src="./images/logo-media/logo-facebook.png" alt=""></a></div>
+                    <div><a href="#"><img src="./images/logo-media/logo-youtube.png" alt=""></a></div>
+                    <div><a href="#"><img src="./images/logo-media/logo-instagram.jpg" alt=""></a></div>
+                    <div><a href="#"><img src="./images/logo-media/logo-twitter.png" alt=""></a></div>
+                </div>
+                <div id="embed_fb">
+                    <h4>Fanpage</h4>
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FOUD-108938628159840%2F%3Fref%3Dpages_you_manage&tabs&width=270&height=140&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="270" height="140" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+     <!--footer-bottom-->
+     <div class="footer-bottom">
+        <p>Copyright © 2020 OU&D Studio. All rights reserved</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js" integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>           
+    <script src="./js/carousel.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#mobile-list-store').click(function(){
+                $('#list-store').slideToggle();
+            })
+
+            $('#Contact').click(function(){
+                $('#contact-list').slideToggle();
+            })
+        })
+    </script>
+    
 </body>
 </html>

@@ -1,0 +1,26 @@
+/*Ipad*/
+@media (min-width: 740px) and (max-width: 1024px){
+    .main{
+        width: 100%;
+        margin: 50px auto;
+    }
+    
+    .main .login > div,
+    .main .create > div{
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 739px){
+    .main{
+        width: 100%;
+        margin: 50px auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main .login > div,
+    .main .create > div{
+        width: 300px;
+    }
+}

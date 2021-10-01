@@ -6,6 +6,9 @@
     }
 
     /*body*/
+    .title{
+        margin: 0 10px;
+    }
     section.body{
         width: 100%;
     }
@@ -18,7 +21,7 @@
         font-size: 11px;
     }
 
-    .list ul li a.icon-list{
+    .List ul li .icon-list{
         display: none;
     }
 }

@@ -8,9 +8,9 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 /*Nav Logo*/
-#logo img{
+#logo .logo-image img{
     width: 100%;
-    max-height: 400px;
+    height: 400px;
 }
 
 /*ads*/
@@ -59,7 +59,7 @@ div.filtering > div{
 }
 .BS img{
     width: 100%;
-    transition: opacity 1s;
+    transition: opacity linear 0.5s;
 }
 div.BS:hover img{
     opacity: 0.5;
@@ -170,7 +170,7 @@ div.xem > a:hover{
     font-size: 15px;
     font-weight: bold;
 }
-div.content{
+.Blog-sub p{
     font-size: 13px;
     line-height: 21px;
     font-weight: 400;
@@ -180,6 +180,7 @@ div.Blog{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
 }
 div.Blog-sub{
     width: 31%;
@@ -206,7 +207,7 @@ div.Blog-sub > div{
     background-color: #fafafa;
 }
 div.title h4{
-    font-size: 18px;
+    font-size: 17px;
     font-weight: bold;
 }
 div.title div.icon{
@@ -225,4 +226,8 @@ div.service-con{
     width: 22%;
     margin:0.5%;
     padding: 20px;
+}
+
+div.service-con span{
+    font-size: 10px;
 }

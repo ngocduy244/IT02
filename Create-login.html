@@ -16,12 +16,13 @@
         <!--CSS-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel="shortcut icon" href="./images/Logo/logo-2.png">
         <link rel="stylesheet" href="./CSS/menu-foot-imgProduct.css">
-        <link rel="stylesheet" href="./CSS/cart.css">
+        <link rel="stylesheet" href="./CSS/create-login.css">
         <link rel="stylesheet" href="./CSS responsive/responsive-menu-foot.css">
-        <link rel="stylesheet" href="./CSS responsive/responsive-cart.css">
-        <title>Giỏ hàng - OU&D</title>
+        <link rel="stylesheet" href="./CSS responsive/responsive-create-login.css">
+        <title>Trang Chủ</title>
     </head>
     <body>
          <!--header-->
@@ -38,8 +39,8 @@
                 </div>
             </div>
         </header>
-           <!--Phần Menu-->
-           <nav id="Menu">
+          <!--Phần Menu-->
+          <nav id="Menu">
             <div class="logo">
                 <a href="index.html"><img src="./images/Logo/logo-5.png" alt=""></a>
             </div>
@@ -274,178 +275,57 @@
             </nav>
 
         </nav>
-        <!--Cart-->
-        <section class="main-cart">
-            <div class="main">
-                <div class="left">
-                    <div class="information">
-                        <div class="head">Thông tin cần liên hệ</div>
-                        <div class="list">
-                            <div class="form info-left">
-                                <label for="" class="text">Họ và tên*</label> 
-                                <div><input type="text" required></div>
-                            </div>
-                            <div class="form info-left">
-                                <label for="" class="text">Email</label>
-                                <div><input type="email" placeholder="Không bắt buộc"></div>
-                            </div>
-                            <div class="form info-left">
-                                <label for="" class="text">Số điện thoại*</label>
-                                <div><input type="text" maxlength="12" required></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="address-contract">
-                        <div class="head">Địa chỉ giao hàng</div>
-                        <div class="list">
-                            <div class="form">
-                                <label for="" class="text">Chọn tỉnh thành*</label> 
-                                <span>
-                                    <tr>
-                                        <td>
-                                            <select style="background-color: #ededed;" name="number" id="number" required>
-                                                <option selected value="1">--- Chọn tỉnh thành ---</option>
-                                                <option value="2">An Giang</option>
-                                                <option value="3">Bà Rịa - Vũng Tàu</option>
-                                                <option value="4">Bình Dương</option>
-                                                <option value="5">Đồng Nai</option>
-                                                <option value="6">Khánh Hòa</option>
-                                                <option value="7">Hồ Chí Minh</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                </span>
-                            </div>
-                            <div class="form">
-                                <label for="" class="text">Chọn quận huyện*</label>
-                                <span>
-                                    <tr>
-                                        <td>
-                                            <select style="background-color: #ededed;" name="number" id="number" required>
-                                                <option selected value="1">Bạn Chưa chọn tỉnh thành</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                </span>
-                            </div>
-                            <div class="form">
-                                <label for="" class="text">Tên phường/Xã*</label>
-                                <span><input type="text" required></span>
-                            </div>
-                            <div class="form">
-                                <label for="" class="text">Số nhà, tên đường*</label> 
-                                <span><input type="text" required></span>
-                            </div>
-                            <div class="form">
-                                <label for="" class="text">Ghi chú</label>
-                                <span><input type="text" class="note"></span>
-                            </div>
-                            <div class="send-cart">
-                                <input type="text" class="send" value="Gửi đơn hàng" disabled>
-                            </div>
-                        </div>
-                    </div>
+
+        <section class="main">
+            <div class="login">
+                <h6>Đăng nhập</h6>
+                <div class="login-account required">
+                    <span><i class="fas fa-envelope"></i></span>
+                    <input type="text" placeholder="Email của bạn">
                 </div>
-                <div class="right">
-                    <div class="head">Giỏ hàng của bạn</div>
-                    <div class="product-list">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Hình</th>
-                                    <th>Thông tin sản phẩm</th>
-                                    <th style="width: 30px;">SL</th>
-                                    <th style="width: 70px;">Đơn giá</th>
-                                    <th style="width: 70px;">Tổng</th>
-                                    <th style="width: 50px;">Xóa</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr style="border-top:1px solid #999;">
-                                    <td rowspan="2"><img src="./images/AK019/Black_1.png" alt=""> </td>
-                                    <td  class="name">Áo Khoác Dù Trơn Nón Rời AK019</th>
-                                    <td>1</td>
-                                    <td>345.000</td>
-                                    <td>345.000</td>
-                                    <td></td>
-                                </tr>
-                                <tr style="border-top:1px solid #999;">
-                                    <td align="right">Size: S</td>
-                                    <td colspan="3">
-                                        <input class="input-sm"  style="width:60px; text-align:center;" value="1" type="number" min="1" max="10">
-                                    </td>
-                                    <td>
-                                        <input type="button" class="btnDelete"  value="Xóa">
-                                    </td>
-                                </tr>
-                                <tr style="border-top:1px solid #999;">
-                                    <td rowspan="2"><img src="./images/Quần Jean/QJ685.jpg" alt=""> </td>
-                                    <td  class="name">Quần Jean Slimfit QJ685 Màu Đen</th>
-                                    <td>1</td>
-                                    <td>550.000</td>
-                                    <td>550.000</td>
-                                    <td></td>
-                                </tr>
-                                <tr style="border-top:1px solid #999;">
-                                    <td align="right">Size: S</td>
-                                    <td colspan="3">
-                                        <input class="input-sm"  style="width:60px; text-align:center;" value="1" type="number" min="1" max="10">
-                                    </td>
-                                    <td>
-                                        <input type="button" class="btnDelete"  value="Xóa">
-                                    </td>
-                                </tr>
-                                <tr style="border-top:1px solid #999;">
-                                    <td rowspan="2"><img src="./images/Favorite_Product/DRY-EX.jpg" alt=""> </td>
-                                    <td class="name">DRY-EX HALF-ZIP SHORT SLEEVE T</th>
-                                    <td>1</td>
-                                    <td>499.000</td>
-                                    <td>499.000</td>
-                                    <td></td>
-                                </tr>
-                                <tr style="border-top:1px solid #999;">
-                                    <td align="right">Size: S</td>
-                                    <td colspan="3">
-                                        <input class="input-sm"  style="width:60px; text-align:center;" value="1" type="number" min="1" max="10">
-                                    </td>
-                                    <td>
-                                        <input type="button" value="Xóa">
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tfoot>
-                                <tr style="border-top:1px solid #999;">
-                                    <td align="right" colspan="6">
-                                        <input type="button" value="Quay về" class="home">
-                                    </td>
-                                </tr>
-                            </tfoot>
-                        </table>
-                    </div>
-                    <div class="head">Tổng</div>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>Số tiền mua hàng</td> 
-                                <td align="right">1.394.000 VND</td>
-                            </tr>
-                            <tr style="border-top:1px solid #999;">
-                                <td align="left" colspan="2">Tổng trọng lượng sản phẩm: 2350 Gram</td>
-                            </tr>
-                        </tbody>
-                        <tfoot class="price">
-                            <tr style="border-top:1px solid #999;">
-                                <td align="right">Tổng tiền</td>
-                                <td align="right">1.394.000 VND</td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                    <div class="send-cart">
-                        <input type="text" class="send" value="Gửi đơn hàng" disabled>
-                    </div>
+
+                <div class="input-password required">
+                    <span><i class="fas fa-lock"></i></span>
+                    <input type="text" placeholder="Nhập mật khẩu">
                 </div>
+
+                <button class="btn-btn">ĐĂNG NHẬP</button>
+
+                <p class="forgot-password"><a href="#">Quên mật khẩu?</a></p>
             </div>
+
+            <div class="create">
+                <h6>Đăng ký thành viên mới</h6>
+                <div class="create-name required">
+                    <span><i class="fas fa-user"></i></span>
+                    <input type="text" placeholder="Tên">
+                </div>
+
+                <div class="create-name required">
+                    <span><i class="fas fa-user"></i></span>
+                    <input type="text" placeholder="Họ">
+                </div>
+
+                <div class="login-account required">
+                    <span><i class="fas fa-envelope"></i></span>
+                    <input type="text" placeholder="Email">
+                </div>
+
+                <div class="login-account required">
+                    <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                    <input type="text" placeholder="Số điện thoại">
+                </div>
+
+                <div class="input-password required">
+                    <span><i class="fas fa-lock"></i></span>
+                    <input type="text" placeholder="Mật khẩu">
+                </div>
+
+                <button class="btn-btn">ĐĂNG KÝ</button>
+            </div>
+
         </section>
+
         <!--Phone-->
         <section class="phone">
             <div class="phone">
@@ -534,10 +414,40 @@
             </div>
         </footer>
 
-         <!--footer-bottom-->
-         <div class="footer-bottom">
+        <!--footer-bottom-->
+        <div class="footer-bottom">
             <p>Copyright © 2020 OU&D Studio. All rights reserved</p>
         </div>
+
+        <!--Menu-Mobile-->
+        <section class="navBar-mobile">
+                <ul class="mobile-menu-list">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                            <p>Sản phẩm mới</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-tags" aria-hidden="true"></i>
+                            <p>Khuyến mãi</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <p>Cửa hàng</p>
+                        </a>
+                    </li>
+                    <li id="mobile-menu" class="mobile-menu-btn">
+                        <a href="javascript:void(0);">
+                            <i class="fas fa-bars"></i>
+                            <p>Menu</p>
+                        </a>
+                    </li>
+                </ul>
+        </section>
 
         <script>
             $(document).ready(function(){

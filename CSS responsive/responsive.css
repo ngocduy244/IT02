@@ -1,6 +1,11 @@
 
 /*Ipad*/
 @media screen and (min-width: 740px) and (max-width: 1023px){
+    /* logo */
+    #logo .logo-image img{
+        height: 300px;
+    }
+
     /*ADS*/
     .carousel-inner img{
         height: 400px;
@@ -17,16 +22,20 @@
     }
 
     .BS img{
-        min-height: 200px;
+        min-height: 250px;
     }
-    div.comment-top .name,
+    div.comment-top .name{
+        font-size: 15px;
+    }
     div.comment-top .money{
         font-size: 18px;
+        font-weight: bold;
     }
 
     .slick-prev::before, .slick-next::before{
         display: none;
     }
+
 
     /*favorite product*/
     .favorite{
@@ -38,10 +47,26 @@
         margin: 1%;
     }
 
+    div.comment > h6,
+    .price .money{
+        font-size: 18px;
+    }
+
+    /* service */
+    div.service{
+        display: none;
+    }
+
 }
 
 /*Mobile*/
 @media screen and (max-width: 739px){
+    /* logo */
+    #logo .logo-image img{
+        height: 200px;
+    }
+
+
     /*ADS*/
     section.ads-main{
         width: 100%;
@@ -66,7 +91,7 @@
     }
     
     div.filtering > div{
-        height: 330px;
+        height: 280px;
     }
 
     .slick-prev::before, .slick-next::before{
@@ -75,7 +100,7 @@
 
     div.comment-top .name,
     div.comment-top .money{
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .image-product:hover span{
@@ -101,7 +126,7 @@
     }
 
     .product .comment h6{
-        font-size: 14px;
+        font-size: 12px;
     }
 
     div.label,
@@ -115,16 +140,13 @@
     }
 
     /*Blog*/
-    .Blog-sub .content p{
-        display: none;
-    }
 
     .Blog-sub > .title{
         font-size: 12px;
     }
 
     div.Blog-sub{
-        width: 48%;
+        width: 90%;
     }
 
     /*section service*/

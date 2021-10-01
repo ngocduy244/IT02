@@ -55,7 +55,7 @@
 
 .modal-information .title{
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .modal-information .condition{
@@ -84,6 +84,8 @@
 
 .modal-information .cart ul li{
      cursor: pointer;
+     font-weight: bold;
+     font-size: 18px;
 }
 
 .cart > ul > li.dangKy{
@@ -92,8 +94,8 @@
     padding: 10px;
 } 
 
-.cart > ul > li.dangKy:hover{
-    opacity: 0.9;
+.cart > ul > li:hover{
+    opacity: 0.7;
 }
 
 .modal-information .btn a{

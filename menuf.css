@@ -49,12 +49,11 @@ body{
     font-size: 20px;
     width: auto;
     margin: 0 auto;
-    padding: 5px 30px;
+    padding: 5px 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
-    border-bottom: 2px solid #ccc;
 }
 
 #Menu .logo{
@@ -78,11 +77,6 @@ ul{
     margin: 0;
 }
 
-ul > li a{
-    color: #000;
-    text-decoration: none;
-}
-
 #menu-list > ul{
     display: flex;
     justify-content: center;
@@ -96,7 +90,7 @@ ul > li a{
     text-decoration: none;
     color: #000;
     display: block;
-    padding: 15px;
+    padding: 10px 15px;
     font-weight: bold;
 }
 
@@ -119,7 +113,7 @@ li.sub:hover .menusub{
 }
 
 #menu-list > ul > li:hover > a{
-   opacity: 0.6;
+    color: #b8860b;
 }
 
 #main-menu .menusub li:hover a{
@@ -135,211 +129,6 @@ li.sub:hover .menusub{
     bottom: 100%;
     left: 40%;
 }
-
-.nav-badge{
-    background-color: rgb(180, 27, 27);
-    color: #fff;
-    padding: 0 6px;
-    position: absolute;
-    font-size: 12px;
-    top: -5px;
-    right: -10px;
-}
-
-.nav-badge::after{
-    content: "";
-    border-width: 5px;
-    border-style: solid;
-    border-color: rgb(180, 27, 27) transparent transparent  transparent;
-    position: absolute;
-    top: 100%;
-    right: 15px;
-}
-
-/* menu ipad */
-    /* search */
-.search-ipad{
-    width: 95%;
-    margin: 0 auto;
-    background-color: #fff;
-    margin-bottom: 30px;
-    padding: 5px;
-}
-
-.search-ipad input{
-    width: 85%;
-    border: none;
-    outline: none;
-    padding: 10px;
-    font-size: 20px;
-}
-
-.search-ipad span{
-    font-size: 20px;
-    padding: 8px 5px;
-    cursor: pointer;
-}
-    /* navbar ipad */
-.nav-ipad{
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 400px;
-    max-width: 100%;
-    z-index: 10000;
-    background-color: #DCDCDC;
-    transform: translateX(100%);
-    transition: all linear 0.5s;
-}
-
-.nav-ipad > ul > li a{
-    text-decoration: none;
-    color: #000;
-    display: block;
-    padding: 10px 15px;
-    font-weight: bold;
-    font-size: 20px;
-    text-align: left;
-}
-
-li.sub-menu-ipad > ul.menusub-ipad > li > a{
-    color: #fff !important;
-}
-
-li.sub-menu-ipad ul.menusub-ipad{
-    display: none;
-    background-color: #363636;
-    width: 100%;
-}
-
-li.sub-menu-ipad:hover  ul.menusub-ipad {
-    display: block; 
-    opacity: 0.9;
-    font-size: 20px;
-}
-
-.nav-ipad > ul > li:hover > a{
-    color: #b8860b;
-}
-
-.nav-ipad .menusub-ipad li:hover a{
-    background-color: #000; 
-}
-
-.navbar-ipad-btn{
-    font-size: 40px;
-    cursor: pointer;
-    display: none;
-    padding: 5px;
-}
-
-.nav-overlay{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: none;
-    animation: fadeIn linear 0.5s;
-    z-index: 10000;
-}
-
-@keyframes fadeIn{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-.nav-ipad > ul > li{
-    position: relative;
-}
-
-.navbar-ipad-close{
-    font-size: 35px;
-    position: absolute;
-    top: 0;
-    right: 10px;
-    cursor: pointer;
-    z-index: 200;
-}
-
-.check-nav-ipad{
-    display: none;
-}
-
-.check-nav-ipad:checked ~ .nav-overlay{
-    display: block;
-}
-
-.check-nav-ipad:checked ~ .nav-ipad{
-    transform: translateX(0);
-}
-
-/* menu-mobile */
-.nav-mobile{
-    position: fixed;
-    top: 50px;
-    right: 0;
-    left: 0;
-    z-index: 100;
-    background-color: #efefef;
-    max-width: 100%;
-    overflow: auto;
-    height: calc(100vh - 53px);
-    transform: translateY(-120%);
-    transition: transform linear 0.5s;    
-}
-
-.nav-mobile > ul > li a{
-    text-decoration: none;
-    color: #000;
-    display: block;
-    padding: 10px 15px;
-    font-weight: bold;
-    font-size: 20px;
-    text-align: left;
-}
-
-.nav-mobile > ul > li{
-    position: relative;
-}
-
-li.sub-menu-mobile > ul.menusub-mobile > li > a{
-    color: #fff !important;
-}
-
-li.sub-menu-mobile ul.menusub-mobile{
-    display: none;
-    background-color: #363636;
-    width: 100%;
-}
-
-li.sub-menu-mobile:hover  ul.menusub-mobile {
-    display: block; 
-    opacity: 0.9;
-    font-size: 20px;
-}
-
-.nav-mobile > ul > li:hover > a{
-    color: #b8860b;
-}
-
-.nav-mobile .menusub-mobile li:hover a{
-    background-color: #000; 
-}
-
-.nav-input:checked ~ .nav-mobile{
-    transform: translateY(0);
-}
-
-.mobile-menu-list > li:hover{
-    background-color: #efefef;
-}
-
 
 /* search (Phần tìm kiếm) */
 #icon-list .search{
@@ -428,19 +217,21 @@ li.sub-menu-mobile:hover  ul.menusub-mobile {
 
 /*mobile-menu (menu khi ở điện thoại)*/
 .navBar-mobile{
+    max-width: 100%;
+    margin: 0 auto;
     display: none;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
 }
 
 .mobile-menu-list{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    position: fixed;
     background-color: #fff;
-    border-top: 1px solid #eaeaea;
+    border-top: 1px solid black;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 .mobile-menu-list p{
@@ -450,7 +241,7 @@ li.sub-menu-mobile:hover  ul.menusub-mobile {
 .mobile-menu-list > li{
     font-size: 14px;
     text-align: center;
-    padding: 5px 10px;
+    padding: 5px;
 }
 
 .mobile-menu-list > li a{
@@ -550,36 +341,22 @@ a#top{
     color: black;
     background-color: #fafafa;  
     align-items: flex-start;
-    justify-content: space-around;
-    padding: 20px 10px;
+    justify-content: space-evenly;
+    padding: 20px 0;
 }
-
-
 
 div.address h4:hover{
     cursor: pointer;
 }
 
-.foot .social-media .icon-media{
+.social-media > .icon-media{
     display: flex;
+    font-size: 30px;
 }
-
-.foot .social-media .icon-media > div{
-    width: 40px;
-    margin: 0.5%;
+.social-media .icon-media > div{
+    padding: 0 5px;
+    margin-bottom: 20px;
 }
-
-
-
-.social-media .icon-media > li:hover a{
-    opacity: 0.7;
-}
-
-
-.foot img{
-    width: 100%;
-}
-
 div.email > a{
     text-decoration: none;
     color: black;

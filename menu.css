@@ -171,7 +171,6 @@ li.sub:hover .menusub{
     border: none;
     outline: none;
     padding: 10px;
-    font-size: 20px;
 }
 
 .search-ipad span{
@@ -228,7 +227,7 @@ li.sub-menu-ipad:hover  ul.menusub-ipad {
 }
 
 .navbar-ipad-btn{
-    font-size: 40px;
+    font-size: 30px;
     cursor: pointer;
     display: none;
     padding: 5px;
@@ -259,12 +258,11 @@ li.sub-menu-ipad:hover  ul.menusub-ipad {
 }
 
 .navbar-ipad-close{
-    font-size: 35px;
+    font-size: 30px;
     position: absolute;
     top: 0;
     right: 10px;
     cursor: pointer;
-    z-index: 200;
 }
 
 .check-nav-ipad{
@@ -290,7 +288,7 @@ li.sub-menu-ipad:hover  ul.menusub-ipad {
     max-width: 100%;
     overflow: auto;
     height: calc(100vh - 53px);
-    transform: translateY(-120%);
+    transform: translateY(-110%);
     transition: transform linear 0.5s;    
 }
 

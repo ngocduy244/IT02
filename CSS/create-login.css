@@ -1,0 +1,75 @@
+.main{
+    width: 80%;
+    margin: 100px auto 150px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    color: #666;
+}
+
+.main .login > div,
+.main .create > div{
+    margin-bottom: 15px;
+}
+
+.main h6{
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.main .login > div,
+.main .create > div{
+    width: 500px;
+    background-color: #fff;
+    position: relative;
+    border: 1px solid #000;
+    padding: 5px;
+
+}
+
+.main .required::after{
+    content: "*";
+    color: rgb(182, 26, 26);
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 18px;
+}
+
+.main .login input,
+.main .create input{
+    border: none;
+    outline: none;
+    width: 90%;
+}
+
+.btn-btn{
+    background-color: #fff;
+    outline: none;
+    padding: 10px;
+    font-size: 12px;
+    width: 100%;
+    border: 1px solid #000;
+    margin-bottom: 10px;
+}
+
+.btn-btn:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+.login .forgot-password a{
+    text-decoration: none;
+    color: initial;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.login .forgot-password{
+    text-align: center;
+}
+
+.login .forgot-password:hover a{
+    color: rgb(38, 140, 204);
+}

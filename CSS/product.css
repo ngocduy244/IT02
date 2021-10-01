@@ -37,7 +37,7 @@ section.ads{
 .List > ul{
     display: flex;
     text-align: left;
-    font-size: 14px;
+    font-size: 16px;
     align-items: center;
 }
 
@@ -50,6 +50,7 @@ section.ads{
     color: #000;
     display: block;
     padding: 10px 20px;
+    border: 1px solid transparent;
 }
 
 .List > ul > li  .icon-list{
@@ -70,7 +71,7 @@ li.sub-product:hover .menu-product{
 
 .List > ul > li:hover > a,
 .title .menu-product li:hover a{
-    border: 1px solid #ccc;
+    border-color: #ccc;
     box-shadow: 1px #ccc;
 }
 

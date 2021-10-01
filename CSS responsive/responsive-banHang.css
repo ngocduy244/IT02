@@ -52,7 +52,11 @@
     }
 
     .comment{
-        font-size: 19px;
+        font-size: 16px;
+    }
+
+    .comment .gia{
+        font-size: 18px;
     }
 
 }
@@ -150,7 +154,7 @@
 
     /*other product*/
     div.filtering > div{
-        height: 300px;
+        height: 250px;
     }
 
     .OP .title{
@@ -162,7 +166,11 @@
     }
 
     .comment{
-        font-size: 15px;
+        font-size: 10px;
+    }
+
+    .comment .gia{
+        font-size: 12px;
     }
     
 }

@@ -1,0 +1,94 @@
+/* New */
+.New h1{
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.New-contain{
+    width: 95%;
+    margin: 3% auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.New-contain img,
+.Blog img{
+    width: 100%;
+}
+
+.main-new{
+    width: 55%;
+}
+
+.sub-news{
+    display: flex;
+    width: 45%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sub-news > .sub-item{
+    margin: 0.5%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sub-news > .sub-item:first-child{
+    margin: 0 0.5% 0.5%;
+    padding: 0 5px 5px;
+}
+
+.sub-item > div{
+    padding: 0 5px;
+}
+
+.content h4 a{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.New-contain .main-new .content h4 {
+    text-align: center;
+}
+
+.content > div{
+    font-size: 14px;
+    color: #666;
+}
+
+/* Blog */
+
+.Blog h3{
+   text-align: center;
+}
+
+.Blog-contain{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Blog-contain > .Blog-sub{
+    width: 49%;
+    margin: 0.5%;
+    padding: 5px;
+    display: flex;
+}
+
+.Blog-sub > div{
+    margin: 0 0.5%;
+}
+
+.Blog-sub .post-thumb{
+    width: 30%;
+}
+
+.Blog-sub .content{
+    width: 70%;
+}

@@ -1,14 +1,13 @@
 /*Ipad*/
-@media screen and (min-width: 740px) and (max-width: 1024px){
+@media screen and (min-width: 740px) and (max-width: 1023px){
     /*header*/
     .heading{
+        font-size: 13px;
         padding: 15px;
     }
     
     /*nav menu*/
-    #Menu,
-    ul.menusub > li{
-        font-size: 14px;
+    #Menu{
         justify-content: space-between;
     }
 
@@ -38,39 +37,16 @@
         display: block;
     }
 
-    /* mobile menu */
-    .nav-badge{
-        right: 10px;
-        font-size: 14px;
-    }
+
 
     /*product-image*/
     .image-product:hover span{
         display: none;
     }
 
-    /* Blog */
-    .Blog-sub > .title{
-        font-size: 19px;
-    }
-
-    .Blog-sub p{
-        font-size: 15px;
-    }
-    
-    div.Blog-sub{
-        width: 48%;
-    }
-    /* Back */
-    a#top{
-        font-size: 20px;
-        padding: 20px 25px;
-    }
-
     /*section foot*/
     .foot{
         line-height: 1.6;
-        font-size: 18px;
     }
 
     div.ggmap{
@@ -112,9 +88,29 @@
     }
 
     #menu-list > ul{
-       display: none;
+        position: absolute;
+        flex-direction: column;
+        justify-content: flex-start;
+        top: 50px;
+        right: 0;
+        left: 0;
+        z-index: 100;
+        background-color: #efefef;
+        max-width: 100%;
+        height: calc(100vh - 53px);
+        transform: translateY(-110%);
+        transition: transform linear 0.5s;
     }
 
+    #main-menu .sub .menusub{
+        position: relative;
+    }
+
+    #menu-list > ul > li a{
+        font-size: 20px;
+        padding: 10px;
+        font-size: 18px;
+    }
 
     #icon-list .search{
         height: 25px;
@@ -145,6 +141,7 @@
         height: 50px;   
         top: 45px;
         right: 0px;
+
     }
 
     #icon-list .search .input-search::after{
@@ -174,10 +171,13 @@
         z-index: 1000;
     }
 
-    .nav-badge{
-        right: 10px;
-        top: 5px;
-    }    
+    .nav-input:checked ~ #menu-list > ul{
+        transform: translateY(0);
+    }
+
+    .mobile-menu-list > li:hover{
+        background-color: #efefef;
+    }
 
     /*product-image*/
     .image-product:hover span{
@@ -205,8 +205,8 @@
     /*section foot*/
     .foot{
         line-height: 1.6;
-        font-size: 12px;
-        padding: 20px 5px;
+        font-size: 14px;
+        padding: 20px 0;
     } 
 
 
