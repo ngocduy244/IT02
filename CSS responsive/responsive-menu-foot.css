@@ -61,11 +61,7 @@
     div.Blog-sub{
         width: 48%;
     }
-    /* Back */
-    a#top{
-        font-size: 20px;
-        padding: 20px 25px;
-    }
+   
 
     /*section foot*/
     .foot{
@@ -188,8 +184,8 @@
     a#top{
         font-size: 12px;
         padding: 10px 15px;
-        bottom: 80px;
-        right: 20px;
+        bottom: 145px;
+        right: 25px;
     }
 
     /*Introduce shop*/

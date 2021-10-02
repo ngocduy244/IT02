@@ -500,14 +500,17 @@ a#top{
     color: #fff;
     font-size: 15px;
     position: fixed;
-    bottom: 130px;
+    bottom: 150px;
     padding: 5px 10px;
-    right: 24px;
+    right: 27px;
     text-align: center;
     border-radius: 50%;
     display: block;
     background-color: #363636;
     z-index: 50;
+}
+
+a#top:hover{
     opacity: 0.7;
 }
 
@@ -600,3 +603,7 @@ div.email:hover > a{
 }
 
 
+/* plugin facebook */
+.fb_dialog_content iframe{
+    right: 10px !important;
+}
