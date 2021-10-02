@@ -502,7 +502,7 @@ a#top{
     position: fixed;
     bottom: 100px;
     padding: 10px 15px;
-    right: 40px;
+    right: 24px;
     text-align: center;
     border-radius: 50%;
     display: block;
@@ -598,4 +598,5 @@ div.email:hover > a{
     font-size: 13px;
     border-top: 1px solid #666 ;
 }
+
 
