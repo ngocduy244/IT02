@@ -21,7 +21,7 @@ section.ads-main{
 
 .carousel-inner img{
     width: 100%;
-    max-height: 500px;
+    min-height: 500px;
 }
 
 /*ads-sub*/

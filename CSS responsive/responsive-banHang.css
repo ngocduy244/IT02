@@ -2,11 +2,11 @@
 @media (min-width: 740px) and (max-width: 1023px){
     /*section product*/
     section.product{
-        width: 95%;
+        width: 100%;
     }
 
     div.information, div.color{
-        padding: 20px 20px 0;
+        padding: 20px 10px 0 20px;
     }
 
     div.information div span{
@@ -38,6 +38,10 @@
         font-size: 18px;
     }
 
+    .js-address{
+        font-size: 15px;
+    }
+
     /*Other product*/
     .OP{
         width: 93%;
@@ -55,7 +59,7 @@
         font-size: 16px;
     }
 
-    .comment .gia{
+    .comment .price-main{
         font-size: 18px;
     }
 

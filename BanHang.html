@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="./CSS/menu-foot-imgProduct.css">
     <link rel="stylesheet" href="./CSS/BanHang.css">
     <link rel="stylesheet" href="./CSS/modal-box.css">
+    <link rel="stylesheet" href="./CSS/modal-box-product.css">
     <link rel="stylesheet" href="./CSS responsive/responsive-menu-foot.css">
     <link rel="stylesheet" href="./CSS responsive/responsive-banHang.css">
    
@@ -392,61 +393,61 @@
             <div class="thumb-sub">
                 <div class="image-product">
                     <a href="#"><img src="./images/Áo khoác/AK249.jpg" alt=""></a>
-                    <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                    <span class="animate__animated animate__rotateInDownLeft js-buy-btn"><a href="javascript:void(0);"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
                 </div>
                 <div class="comment">
-                    <div>Áo Khoác Dù AK249</div>
-                    <div class="gia">275.000VND</div>
+                    <div class="name">Áo Khoác Dù AK249</div>
+                    <div class="price-main">275.000VND</div>
                 </div>
             </div>
             <div class="thumb-sub">
                 <div class="image-product">
                     <a href="#"><img src="./images/BestSeller/BS2_AOK.jpg" alt=""></a>
-                    <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                    <span class="animate__animated animate__rotateInDownLeft js-buy-btn"><a href="javascript:void(0);"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
                 </div>
                 <div class="comment">
-                    <div>Áo Khoác Dù 3 Lớp AK195</div>
-                    <div class="gia">275.000VND</div>
+                    <div class="name">Áo Khoác Dù 3 Lớp AK195</div>
+                    <div class="price-main">275.000VND</div>
                 </div>
             </div>
             <div class="thumb-sub">
                 <div class="image-product">
                     <a href="#"><img src="./images/Áo khoác/AK138_DD.jpg" alt=""></a>
-                    <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                    <span class="animate__animated animate__rotateInDownLeft js-buy-btn"><a href="javascript:void(0);"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
                 </div>
                 <div class="comment">
-                    <div>Áo Khoác Dù AK138</div>
-                    <div class="gia">275.000VND</div>
+                    <div class="name">Áo Khoác Dù AK138</div>
+                    <div class="price-main">300.000VND</div>
                 </div>
             </div>
             <div class="thumb-sub">
                 <div class="image-product">
                     <a href="#"><img src="./images/Áo khoác/AK137.jpg" alt=""></a>
-                    <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                    <span class="animate__animated animate__rotateInDownLeft js-buy-btn"><a href="javascript:void(0);"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
                 </div>
                 <div class="comment">
-                    <div>Áo Khoác Dù AK137</div>
-                    <div class="gia">275.000VND</div>
+                    <div class="name">Áo Khoác Dù AK137</div>
+                    <div class="price-main">345.000VND</div>
                 </div>
             </div>
             <div class="thumb-sub">
                 <div class="image-product">
                     <a href="#"><img src="./images/Áo khoác/AK138_XB.jpg" alt=""></a>
-                    <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                    <span class="animate__animated animate__rotateInDownLeft js-buy-btn"><a href="javascript:void(0);"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
                 </div>
                 <div class="comment">
-                    <div>Áo Khoác Dù AK138</div>
-                    <div class="gia">275.000VND</div>
+                    <div class="name">Áo Khoác Dù AK138</div>
+                    <div class="price-main">250.000VND</div>
                 </div>
             </div>
             <div class="thumb-sub">
                 <div class="image-product">
                     <a href="#"><img src="./images/Áo khoác/AK153.jpg" alt=""></a>
-                    <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                    <span class="animate__animated animate__rotateInDownLeft js-buy-btn"><a href="javascript:void(0);"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
                 </div>
                 <div class="comment">
-                    <div>Áo Khoác Dù AK153</div>
-                    <div class="gia">275.000VND</div>
+                    <div class="name">Áo Khoác Dù AK153</div>
+                    <div class="price-main">355.000VND</div>
                 </div>
             </div>
         </div>
@@ -543,17 +544,17 @@
      <div class="footer-bottom">
         <p>Copyright © 2020 OU&D Studio. All rights reserved</p>
     </div>
-    <!--modal box-->
-    <div class="modal-box">
-        <div class="modal-container js-modal-container">         
+    <!--modal box (modal xme địa chỉ còn hàng không)-->
+    <div class="modal-box-product">
+        <div class="modal-contain js-modal-contain">         
             <header class="modal-header">
                 <h3>SHOWROOMS CÒN HÀNG</h3>
             </header>
 
-            <div class="modal-body">
+            <div class="modal-box-body">
                 <tr>
                     <td>
-                        <select style="width: 100%; height: 40px;" name="number" id="">
+                        <select style="width: 90%; height: 40px;" name="number" id="">
                             <option selected value="1">Chọn tỉnh thành</option>
                             <option value="HCM">Hồ Chí Minh</option>
                             <option value="BD">Bình Dương</option>
@@ -584,6 +585,54 @@
         </div>
     </div>
 
+    <!--Modal box product (modal cho sản phẩm)-->
+    <div class="modal-box">
+        <div class="modal-container js-modal-container">
+            <div class="close js-modal-close-product">
+                <a href="javascript:void(0);"><i class="fa fa-times" aria-hidden="true"></i></a>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="./images/Áo khoác/AK019_Black.png" alt="áo khoác">
+                </div>
+                <div class="modal-information">
+                    <div class="title">Áo Khoác Dù Trơn Nón Rời AK019</div>
+                    <h3 class="money">345.000 VND</h3>
+                    <div class="condition">Tình trạng: còn hàng</div>
+                    <div class="amount">Số lượng*</div>
+                    <tr>
+                        <td>
+                            <select style="width: 50%; height: 40px;" name="number" id="">
+                                <option selected value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <div class="cart">
+                        <ul>
+                            <li class="dangKy">
+                                <i class="fas fa-shopping-cart"></i> ĐĂNG KÝ MUA HÀNG
+                            </li>
+                            <li>+ Thêm vào giỏ hàng</li>
+                        </ul>
+                    </div>
+                    <div class="btn"><a href="#">Xem chi tiết</a></div>
+                    <br>
+                    <input type="button" value="Đóng cửa sổ" class="close js-modal-close-product-1">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js" integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>           
     <script src="./js/carousel.js"></script>
@@ -600,26 +649,90 @@
     </script>
 
     <script>
+    //    modal product
+        const buyBtn = document.querySelectorAll(".js-buy-btn");
+
+        const modal = document.querySelector(".modal-box");
+        const modalContainer = document.querySelector(".js-modal-container");
+        const closeModalProduct = document.querySelector(".js-modal-close-product");
+        const close1 = document.querySelector(".js-modal-close-product-1");
+
+        for(let i = 0; i < buyBtn.length; i++){
+                buyBtn[i].onclick = function(e) {
+                   
+                    const product = e.target.closest(".thumb-sub");
+                    modal.querySelector(".title").innerHTML = product.querySelector(".comment .name").innerHTML;
+                    product.querySelector(".price-main").innerHTML = modal.querySelector(".money").innerHTML;
+                    modal.querySelector(".modal-image img").src = product.querySelector("img").src;
+
+
+                    modal.classList.add("open");
+                }
+            }
+
+            function closeBuyProduct() {
+                modal.classList.remove("open");
+            }
+
+            
+            closeModalProduct.addEventListener("click", closeBuyProduct);
+            modal.addEventListener("click", closeBuyProduct);
+            close1.addEventListener("click", closeBuyProduct);
+            modalContainer.addEventListener("click", function (event) {
+                event.stopPropagation(); /*ngừng sự kiện nổi bọt*/
+            });
+
+        // modal adrress 
+
         const Adrressbtn = document.querySelector('.js-address')
-        const modal = document.querySelector('.modal-box')
-        const modalContainer = document.querySelector('.js-modal-container')
-        const close = document.querySelector('.js-modal-close')
 
-        function showBuyProduct(){
-            modal.classList.add('open')
+        const modalBox = document.querySelector('.modal-box-product')
+        const modalContain = document.querySelector('.js-modal-contain')
+        const closeModal = document.querySelector('.js-modal-close')
+
+        function showAdrress(){
+            modalBox.classList.add('open')
         }
 
-        function closeBuyProduct(){
-            modal.classList.remove('open')
+        function closeAdrress(){
+            modalBox.classList.remove('open')
         }
 
-        Adrressbtn.addEventListener('click', showBuyProduct)
-        close.addEventListener('click', closeBuyProduct)
-        modal.addEventListener('click', closeBuyProduct)
-        modalContainer.addEventListener('click', function(event){
+        Adrressbtn.addEventListener('click', showAdrress)
+        closeModal.addEventListener('click', closeAdrress)
+        modalBox.addEventListener('click', closeAdrress)
+        modalContain.addEventListener('click', function(event){
             event.stopPropagation() /*ngừng sự kiện nổi bọt*/
         })
     </script>
+
+      <!-- Messenger Plugin chat Code -->
+      <div id="fb-root"></div>
+
+      <!-- Your Plugin chat code -->
+      <div id="fb-customer-chat" class="fb-customerchat">
+      </div>
+  
+      <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "108938628159840");
+        chatbox.setAttribute("attribution", "biz_inbox");
+  
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v12.0'
+          });
+        };
+  
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      </script>
 
 </body>
 </html>

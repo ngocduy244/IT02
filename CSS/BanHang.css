@@ -146,7 +146,7 @@ div.thumb-sub img{
     transition: transform 1s;
 }
 
-div.thumb-sub img:hover{
+div.thumb-sub:hover img{
     opacity: 0.5;
 }
 

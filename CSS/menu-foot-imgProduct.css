@@ -403,6 +403,7 @@ li.sub-menu-mobile:hover  ul.menusub-mobile {
 #icon-list .user{
     padding: 0 10px;
     position: relative;
+    
 }
 
 #icon-list .cart a,
@@ -415,9 +416,11 @@ li.sub-menu-mobile:hover  ul.menusub-mobile {
     position: absolute;
     font-size: 13px;
     color: #fff;
-    top: 15%;
-    right: 18px;
+    top: 35%;
+    left: 60%;
+    transform: translate(-60%, -35%);
     font-weight: bold;
+    cursor: pointer;
 }
 
 #icon-list div a:hover,
