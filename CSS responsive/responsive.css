@@ -63,7 +63,7 @@
 @media screen and (max-width: 739px){
     /* logo */
     #logo .logo-image img{
-        height: 200px;
+        height: 150px;
     }
 
 
@@ -72,7 +72,7 @@
         width: 100%;
     }
     .carousel-inner img{
-        max-height: 200px;
+       min-height: 300px;
     }
 
     #demo{

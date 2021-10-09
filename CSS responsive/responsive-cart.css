@@ -1,86 +1,49 @@
-/*Ipad*/
 @media (min-width: 740px) and (max-width: 1023px){
-    /*LEFT*/
-    .list > div{
-        text-align: left;
+    .cart-main{
+        width: 95%;
     }
 
-    .info-left div,
-    .form span > input,
-    .form #number{
-        float: none;
-        width: 100%;
+    td div, th div, tbody{
+        font-size: 18px;
     }
 
-    /*Right*/
-
-    table tr th{
-        font-size: 15px;
-        padding: 5px;
-    }
-
-    .product-list{
-        font-size: 11px;
-    }
-
-    table td,
-    td.name{
-        font-size: 14px;
+    #mycart tr td.name{
+        width: 200px;
     }
     
-
+    
 }
 
 @media screen and (max-width: 739px){
-    /*section cart*/
-    .main{
-        flex-direction: column;
-    }
-
-    .main > div{
-        width: 100%;
-        padding: 0;
-        border: 0;
-        margin: 0;
-    }
-
-    .head {
-        font-size: 20px;
-    }
-
-    /*LEFT*/
-    .send-cart{
-        margin: 20px 0;
-    }
-
-    .list > div{
-        text-align: left;
-    }
-
-    .info-left div,
-    .form span > input,
-    .form #number{
-        float: none;
+    .cart-main{
         width: 100%;
     }
 
-    /*Right*/
-    .product-list{
-        font-size: 11px;
-    }
-
-    td.name{
-        font-weight: bold;
+    th, td{
+        padding: 5px;
         font-size: 12px;
     }
 
-    .right .send-cart{
-        text-align: right;
-        display: block;
+    tbody tr th:nth-child(5),
+    #mycart tr td:nth-child(5){
+        display: none;
+        border: none;
     }
 
-    table tr th,
-    table tr td{
-        padding: 3px;
+    #mycart tr td.remove-product{
+       display: none;
     }
+
+    #mycart tr td.name{
+        width: 130px;
+    }
+    
+    th div{
+        font-size: 14px;
+    }
+
+    td img{
+        width: 50px;
+    }
+    
 }

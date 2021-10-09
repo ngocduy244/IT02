@@ -13,33 +13,24 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="./js/jquery-3.6.0.min.js"></script>
         <script src="./js/back-scroll.js"></script>
+
         <!--CSS-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel="shortcut icon" href="./images/Logo/logo-2.png">
+        
         <link rel="stylesheet" href="./CSS/menu-foot-imgProduct.css">
         <link rel="stylesheet" href="./CSS/cart.css">
+        <link rel="stylesheet" href="./CSS/modal-box-product.css">
         <link rel="stylesheet" href="./CSS responsive/responsive-menu-foot.css">
         <link rel="stylesheet" href="./CSS responsive/responsive-cart.css">
-        <title>Giỏ hàng - OU&D</title>
+        
+        <title>Thanh toán</title>
     </head>
     <body>
-         <!--header-->
-         <header>
-            <div class="heading">
-                <div class="left">
-                    <div class="hotline"><i class="fa fa-phone" aria-hidden="true"></i> Hotline: <span>028-38364748</span></div>
-                    <div><i class="fas fa-envelope"></i> Mail: <a href="mailto: ou@ou.edu.vn">ou@ou.edu.vn</a></div>
-                </div>
-                <div class="right">
-                    <div><a href="#"><i class="fas fa-store"></i> Hệ thống của hàng</a></div>
-                    <div><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Thông tin</a></div>
-                    <div class="question"><a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i> Hỏi đáp</a></div>
-                </div>
-            </div>
-        </header>
-           <!--Phần Menu-->
-           <nav id="Menu">
+        <!--Phần Menu-->
+        <nav id="Menu">
             <div class="logo">
                 <a href="index.html"><img src="./images/Logo/logo-5.png" alt=""></a>
             </div>
@@ -104,11 +95,13 @@
                 </div>
 
                 <div class="cart">
-                    <a href="cart.html">
+                    <a onclick="showcart()">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <span>0</span>
+                        <span id="countsp">0</span>
                     </a>
                 </div>
+                
+
                 <div class="user"><a href="Create-login.html"><i class="fas fa-user"></i></a></div>
             </div> 
 
@@ -273,310 +266,164 @@
                 </ul>
             </nav>
 
-        </nav>
-        <!--Cart-->
-        <section class="main-cart">
-            <div class="main">
-                <div class="left">
-                    <div class="information">
-                        <div class="head">Thông tin cần liên hệ</div>
-                        <div class="list">
-                            <div class="form info-left">
-                                <label for="" class="text">Họ và tên*</label> 
-                                <div><input type="text" required></div>
-                            </div>
-                            <div class="form info-left">
-                                <label for="" class="text">Email</label>
-                                <div><input type="email" placeholder="Không bắt buộc"></div>
-                            </div>
-                            <div class="form info-left">
-                                <label for="" class="text">Số điện thoại*</label>
-                                <div><input type="text" maxlength="12" required></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="address-contract">
-                        <div class="head">Địa chỉ giao hàng</div>
-                        <div class="list">
-                            <div class="form">
-                                <label for="" class="text">Chọn tỉnh thành*</label> 
-                                <span>
-                                    <tr>
-                                        <td>
-                                            <select style="background-color: #ededed;" name="number" id="number" required>
-                                                <option selected value="1">--- Chọn tỉnh thành ---</option>
-                                                <option value="2">An Giang</option>
-                                                <option value="3">Bà Rịa - Vũng Tàu</option>
-                                                <option value="4">Bình Dương</option>
-                                                <option value="5">Đồng Nai</option>
-                                                <option value="6">Khánh Hòa</option>
-                                                <option value="7">Hồ Chí Minh</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                </span>
-                            </div>
-                            <div class="form">
-                                <label for="" class="text">Chọn quận huyện*</label>
-                                <span>
-                                    <tr>
-                                        <td>
-                                            <select style="background-color: #ededed;" name="number" id="number" required>
-                                                <option selected value="1">Bạn Chưa chọn tỉnh thành</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                </span>
-                            </div>
-                            <div class="form">
-                                <label for="" class="text">Tên phường/Xã*</label>
-                                <span><input type="text" required></span>
-                            </div>
-                            <div class="form">
-                                <label for="" class="text">Số nhà, tên đường*</label> 
-                                <span><input type="text" required></span>
-                            </div>
-                            <div class="form">
-                                <label for="" class="text">Ghi chú</label>
-                                <span><input type="text" class="note"></span>
-                            </div>
-                            <div class="send-cart">
-                                <input type="text" class="send" value="Gửi đơn hàng" disabled>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="right">
-                    <div class="head">Giỏ hàng của bạn</div>
-                    <div class="product-list">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Hình</th>
-                                    <th>Thông tin sản phẩm</th>
-                                    <th style="width: 30px;">SL</th>
-                                    <th style="width: 70px;">Đơn giá</th>
-                                    <th style="width: 70px;">Tổng</th>
-                                    <th style="width: 50px;">Xóa</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr style="border-top:1px solid #999;">
-                                    <td rowspan="2"><img src="./images/AK019/Black_1.png" alt=""> </td>
-                                    <td  class="name">Áo Khoác Dù Trơn Nón Rời AK019</th>
-                                    <td>1</td>
-                                    <td>345.000</td>
-                                    <td>345.000</td>
-                                    <td></td>
-                                </tr>
-                                <tr style="border-top:1px solid #999;">
-                                    <td align="right">Size: S</td>
-                                    <td colspan="3">
-                                        <input class="input-sm"  style="width:60px; text-align:center;" value="1" type="number" min="1" max="10">
-                                    </td>
-                                    <td>
-                                        <input type="button" class="btnDelete"  value="Xóa">
-                                    </td>
-                                </tr>
-                                <tr style="border-top:1px solid #999;">
-                                    <td rowspan="2"><img src="./images/Quần Jean/QJ685.jpg" alt=""> </td>
-                                    <td  class="name">Quần Jean Slimfit QJ685 Màu Đen</th>
-                                    <td>1</td>
-                                    <td>550.000</td>
-                                    <td>550.000</td>
-                                    <td></td>
-                                </tr>
-                                <tr style="border-top:1px solid #999;">
-                                    <td align="right">Size: S</td>
-                                    <td colspan="3">
-                                        <input class="input-sm"  style="width:60px; text-align:center;" value="1" type="number" min="1" max="10">
-                                    </td>
-                                    <td>
-                                        <input type="button" class="btnDelete"  value="Xóa">
-                                    </td>
-                                </tr>
-                                <tr style="border-top:1px solid #999;">
-                                    <td rowspan="2"><img src="./images/Favorite_Product/DRY-EX.jpg" alt=""> </td>
-                                    <td class="name">DRY-EX HALF-ZIP SHORT SLEEVE T</th>
-                                    <td>1</td>
-                                    <td>499.000</td>
-                                    <td>499.000</td>
-                                    <td></td>
-                                </tr>
-                                <tr style="border-top:1px solid #999;">
-                                    <td align="right">Size: S</td>
-                                    <td colspan="3">
-                                        <input class="input-sm"  style="width:60px; text-align:center;" value="1" type="number" min="1" max="10">
-                                    </td>
-                                    <td>
-                                        <input type="button" value="Xóa">
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tfoot>
-                                <tr style="border-top:1px solid #999;">
-                                    <td align="right" colspan="6">
-                                        <input type="button" value="Quay về" class="home">
-                                    </td>
-                                </tr>
-                            </tfoot>
-                        </table>
-                    </div>
-                    <div class="head">Tổng</div>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>Số tiền mua hàng</td> 
-                                <td align="right">1.394.000 VND</td>
-                            </tr>
-                            <tr style="border-top:1px solid #999;">
-                                <td align="left" colspan="2">Tổng trọng lượng sản phẩm: 2350 Gram</td>
-                            </tr>
-                        </tbody>
-                        <tfoot class="price">
-                            <tr style="border-top:1px solid #999;">
-                                <td align="right">Tổng tiền</td>
-                                <td align="right">1.394.000 VND</td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                    <div class="send-cart">
-                        <input type="text" class="send" value="Gửi đơn hàng" disabled>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Phone-->
-        <section class="phone">
-            <div class="phone">
-                <i class="fa fa-phone-square" aria-hidden="true"></i> Hỗ trợ / Mua hàng: <span>028-38364748</span> 
-            </div>
-        </section>
-        <!--BACK-->
-        <section class="back">
-            <a id="top" href="javascript:;">
-                <div><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
-                <div class="text">TOP</div>
-            </a>
-        </section>
-        <!--Introduce Shop-->
-        <section class="introduce-shop">
-            <h2>Giới thiệu</h2>
-            <div class="letter">OU&D xuất hiện trên thị trường từ đầu năm 1990, 
-                OU&D mang sức mạnh của một thương hiệu local brand 
-                đầy cá tính với những sản phẩm thời trang hàng đầu xu thế.
-                OU&D thực chất là một cách lồng ghép khéo léo về sự 
-                đời của thương hiệu. Với sức hút của mình, OU&D 
-                trở thành biểu tượng cho phong cách thời 
-                trang mạnh mẽ, táo bạo, và được ưa chuộng rộng rãi. 
-                OU&D mang đến một cái góc độ độc đáo không những 
-                về phong cách sống mà còn về gout ăn mặc hiện đại. 
-                OU&D nhận thức được nhu cầu đang phát triển của 
-                thị trường Streetwear Việt Nam. Những mặt hàng thời 
-                trang tại OU&D được thiết kế với sự kết hợp văn 
-                hoá Châu Á và Châu Âu, tạo ra phong cách độc đáo và mới 
-                mẻ. Bên cạnh đó ,với sự phá cách từ tông màu trắng đen, 
-                tông màu chủ đạo của đa số dòng thời trang Streetwear, 
-                các mẫu thời trang tại OU&D mang nhiều màu sắc
-                phong phú. Đây là cách OU&D mang đến giá trị 
-                cho cộng đồng trẻ yêu thích Streetwear, khuyến khích 
-                họ mạo hiểm trong gu ăn mặc của mình. Với tính cách mạo 
-                hiểm, không ngại rủi ro, OU&D dần mở rộng thị trường 
-                trong suốt quá trình phát triển các chi nhánh trên toàn quốc, 
-                đem tới một nền văn hoá rất riêng của OU&D.
-            </div>
-        </section>
-          <!--Footer-->
-          <footer>
-            <div class="foot">
-                <div class="address">
-                    <h4 id="mobile-list-store"><i class="fa fa-angle-down" aria-hidden="true"></i> Hệ thống cửa hàng</h4>
-                    <div id="list-store">
-                        <div><i class="fa fa-map-marker" aria-hidden="true"> Chi Nhánh Hồ Chí Minh</i></div>
-                        <div><b>Quận 1:</b> 35-37 Hồ Hảo Hớn, Phường Cô Giang</div>
-                        <div><b>Quận 1:</b> 02 Mai Thị Lựu, Phường Đa Kao</div>
-                        <div><b>Quận 3:</b> 97 Võ Văn Tần, Phường 6</div>
-                        <div><b>Quận Gò Vấp:</b> 371 Nguyễn Kiệm, Phường 3</div>
-                        <div><i class="fa fa-map-marker" aria-hidden="true"> Chi Nhánh Bính Dương</i></div>
-                        <div><b>TP.Thủ Dầu Một:</b> 68 Lê Thị Trung, Phường Phú Lợi</div>
-                        <div><i class="fa fa-map-marker" aria-hidden="true"> Chi Nhánh Đồng Nai</i></div>
-                        <div><b>TP.Biên Hòa:</b> Đường số 9, Phường Long Bình Tân</div>
-                        <div><i class="fa fa-map-marker" aria-hidden="true"> Chi Nhánh Khánh Hòa</i></div>
-                        <div><b>Khánh Hòa:</b> Tổ dân phố 17, Phường Ninh Hiệp, Thị Xã Ninh Hòa</div>
-                    </div>
-                    <h4 id="Contact"><i class="fa fa-angle-down" aria-hidden="true"></i> Thông tin liên hệ</h4>
-                    <div id="contact-list">
-                        <div><i class="fa fa-phone" aria-hidden="true"></i> 028-38364748</div>
-                        <div><i class="fa fa-fax" aria-hidden="true"></i> 028-39207639 hoặc 028-39207640.</div>
-                        <div class="email">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                            <a href="mailt to: ou@ou.edu.vn">ou@ou.edu.vn</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="ggmap">
-                    <h4>Địa chỉ cửa hàng trên Google Map</h4>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62707.56165213032!2d106.6811510112395!3d10.794255675549682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528e1f241211f%3A0xc9ef195798144b1f!2sHo%20Chi%20Minh%20City%20Open%20University!5e0!3m2!1sen!2s!4v1628665788362!5m2!1sen!2s" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-                <div class="social-media">
-                    <h4>Mạng xã hội</h4>
-                    <div class="icon-media">
-                        <div><a href="#"><img src="./images/logo-media/logo-facebook.png" alt=""></a></div>
-                        <div><a href="#"><img src="./images/logo-media/logo-youtube.png" alt=""></a></div>
-                        <div><a href="#"><img src="./images/logo-media/logo-instagram.jpg" alt=""></a></div>
-                        <div><a href="#"><img src="./images/logo-media/logo-twitter.png" alt=""></a></div>
-                    </div>
-                    <div id="embed_fb">
-                        <h4>Fanpage</h4>
-                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FOUD-108938628159840%2F%3Fref%3Dpages_you_manage&tabs&width=270&height=140&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="270" height="140" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-         <!--footer-bottom-->
-         <div class="footer-bottom">
-            <p>Copyright © 2020 OU&D Studio. All rights reserved</p>
+        </nav> 
+  
+    <div class="cart-main">
+            <h1>GIỎ HÀNG</h1>
+            <table>
+                <tr>
+                    <th>Hình</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Đơn giá</th>
+                    <th>Số lượng</th>
+                     <th>Thành tiền (VND)</th>
+                    <th>Xóa</th>
+                </tr>
+                <tbody id="mycart"></tbody>
+                
+            </table>              
+    </div>
+       
+    <!--Phone-->
+    <section class="phone">
+        <div class="phone">
+            <i class="fa fa-phone-square" aria-hidden="true"></i> Hỗ trợ / Mua hàng: <span>028-38364748</span> 
         </div>
-
-        <script>
-            $(document).ready(function(){
-                $('#mobile-list-store').click(function(){
-                    $('#list-store').slideToggle();
-                })
-
-                $('#Contact').click(function(){
-                    $('#contact-list').slideToggle();
-                })
-            })
-        </script>
-
-          <!-- Messenger Plugin chat Code -->
-            <div id="fb-root"></div>
-
-            <!-- Your Plugin chat code -->
-            <div id="fb-customer-chat" class="fb-customerchat">
+    </section>
+    <!--BACK-->
+    <section class="back">
+        <a id="top" href="javascript:(0);">
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+            <p>TOP</p>
+        </a>
+    </section>
+    <!--Introduce Shop-->
+    <section class="introduce-shop">
+        <h2>Giới thiệu</h2>
+        <div class="letter">OU&D xuất hiện trên thị trường từ đầu năm 1990, 
+            OU&D mang sức mạnh của một thương hiệu local brand 
+            đầy cá tính với những sản phẩm thời trang hàng đầu xu thế.
+            OU&D thực chất là một cách lồng ghép khéo léo về sự 
+            đời của thương hiệu. Với sức hút của mình, OU&D 
+            trở thành biểu tượng cho phong cách thời 
+            trang mạnh mẽ, táo bạo, và được ưa chuộng rộng rãi. 
+            OU&D mang đến một cái góc độ độc đáo không những 
+            về phong cách sống mà còn về gout ăn mặc hiện đại. 
+            OU&D nhận thức được nhu cầu đang phát triển của 
+            thị trường Streetwear Việt Nam. Những mặt hàng thời 
+            trang tại OU&D được thiết kế với sự kết hợp văn 
+            hoá Châu Á và Châu Âu, tạo ra phong cách độc đáo và mới 
+            mẻ. Bên cạnh đó ,với sự phá cách từ tông màu trắng đen, 
+            tông màu chủ đạo của đa số dòng thời trang Streetwear, 
+            các mẫu thời trang tại OU&D mang nhiều màu sắc
+            phong phú. Đây là cách OU&D mang đến giá trị 
+            cho cộng đồng trẻ yêu thích Streetwear, khuyến khích 
+            họ mạo hiểm trong gu ăn mặc của mình. Với tính cách mạo 
+            hiểm, không ngại rủi ro, OU&D dần mở rộng thị trường 
+            trong suốt quá trình phát triển các chi nhánh trên toàn quốc, 
+            đem tới một nền văn hoá rất riêng của OU&D.
+        </div>
+    </section>
+     <!--Footer-->
+     <footer>
+        <div class="foot">
+            <div class="address">
+                <h4 id="mobile-list-store"><i class="fa fa-angle-down" aria-hidden="true"></i> Hệ thống cửa hàng</h4>
+                <div id="list-store">
+                    <div><i class="fa fa-map-marker" aria-hidden="true"> Chi Nhánh Hồ Chí Minh</i></div>
+                    <div><b>Quận 1:</b> 35-37 Hồ Hảo Hớn, Phường Cô Giang</div>
+                    <div><b>Quận 1:</b> 02 Mai Thị Lựu, Phường Đa Kao</div>
+                    <div><b>Quận 3:</b> 97 Võ Văn Tần, Phường 6</div>
+                    <div><b>Quận Gò Vấp:</b> 371 Nguyễn Kiệm, Phường 3</div>
+                    <div><i class="fa fa-map-marker" aria-hidden="true"> Chi Nhánh Bính Dương</i></div>
+                    <div><b>TP.Thủ Dầu Một:</b> 68 Lê Thị Trung, Phường Phú Lợi</div>
+                    <div><i class="fa fa-map-marker" aria-hidden="true"> Chi Nhánh Đồng Nai</i></div>
+                    <div><b>TP.Biên Hòa:</b> Đường số 9, Phường Long Bình Tân</div>
+                    <div><i class="fa fa-map-marker" aria-hidden="true"> Chi Nhánh Khánh Hòa</i></div>
+                    <div><b>Khánh Hòa:</b> Tổ dân phố 17, Phường Ninh Hiệp, Thị Xã Ninh Hòa</div>
+                </div>
+                <h4 id="Contact"><i class="fa fa-angle-down" aria-hidden="true"></i> Thông tin liên hệ</h4>
+                <div id="contact-list">
+                    <div><i class="fa fa-phone" aria-hidden="true"></i> 028-38364748</div>
+                    <div><i class="fa fa-fax" aria-hidden="true"></i> 028-39207639 hoặc 028-39207640.</div>
+                    <div class="email">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <a href="mailt to: ou@ou.edu.vn">ou@ou.edu.vn</a>
+                    </div>
+                </div>
             </div>
+            <div class="ggmap">
+                <h4>Địa chỉ cửa hàng trên Google Map</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62707.56165213032!2d106.6811510112395!3d10.794255675549682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528e1f241211f%3A0xc9ef195798144b1f!2sHo%20Chi%20Minh%20City%20Open%20University!5e0!3m2!1sen!2s!4v1628665788362!5m2!1sen!2s" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="social-media">
+                <h4>Mạng xã hội</h4>
+                <div class="icon-media">
+                    <div><a href="#"><img src="./images/logo-media/logo-facebook.png" alt=""></a></div>
+                    <div><a href="#"><img src="./images/logo-media/logo-youtube.png" alt=""></a></div>
+                    <div><a href="#"><img src="./images/logo-media/logo-instagram.jpg" alt=""></a></div>
+                    <div><a href="#"><img src="./images/logo-media/logo-twitter.png" alt=""></a></div>
+                </div>
+                <div id="embed_fb">
+                    <h4>Fanpage</h4>
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FOUD-108938628159840%2F%3Fref%3Dpages_you_manage&tabs&width=270&height=140&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="270" height="140" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-            <script>
-            var chatbox = document.getElementById('fb-customer-chat');
-            chatbox.setAttribute("page_id", "108938628159840");
-            chatbox.setAttribute("attribution", "biz_inbox");
+     <!--footer-bottom-->
+     <div class="footer-bottom">
+        <p>Copyright © 2020 OU&D Studio. All rights reserved</p>
+    </div>
 
-            window.fbAsyncInit = function() {
-                FB.init({
-                xfbml            : true,
-                version          : 'v12.0'
-                });
-            };
+    <script src="./js/cart.js"></script>
 
-            (function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-            </script>
-    </body>
-</html>
+    <script>
+        $(document).ready(function(){
+            $('#mobile-list-store').click(function(){
+                $('#list-store').slideToggle();
+            })
+
+            $('#Contact').click(function(){
+                $('#contact-list').slideToggle();
+            })
+        })
+
+        showgiohang_trangthanhtoan();
+
+    </script>
+    
+
+     <!-- Messenger Plugin chat Code -->
+     <div id="fb-root"></div>
+
+     <!-- Your Plugin chat code -->
+     <div id="fb-customer-chat" class="fb-customerchat">
+     </div>
+
+     <script>
+     var chatbox = document.getElementById('fb-customer-chat');
+     chatbox.setAttribute("page_id", "108938628159840");
+     chatbox.setAttribute("attribution", "biz_inbox");
+
+     window.fbAsyncInit = function() {
+         FB.init({
+         xfbml            : true,
+         version          : 'v12.0'
+         });
+     };
+
+     (function(d, s, id) {
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) return;
+         js = d.createElement(s); js.id = id;
+         js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+         fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+     </script>
+
+    <script src="./js/cart.js"></script>
+
+</body>
+</html>               

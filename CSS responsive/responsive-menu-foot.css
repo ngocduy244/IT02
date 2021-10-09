@@ -1,10 +1,5 @@
 /*Ipad*/
 @media screen and (min-width: 740px) and (max-width: 1024px){
-    /*header*/
-    .heading{
-        padding: 15px;
-    }
-    
     /*nav menu*/
     #Menu,
     ul.menusub > li{
@@ -82,10 +77,6 @@
 @media screen and (max-width: 739px){
     body{
         position: relative;
-    }
-     /*header*/
-    .heading{
-       display: none;
     }
     /*menu-list*/
     #Menu{

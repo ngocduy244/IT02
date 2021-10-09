@@ -13,6 +13,7 @@
         <script src="./js/jquery-3.6.0.min.js"></script>
         <script src="./js/back-scroll.js"></script>
         <script src="./js/change-img.js"></script>
+        <script src="./js/cart.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -25,26 +26,12 @@
         <title>Áo khoác nam hàng hiệu, áo khoác cao cấp</title>
     </head>
     <body onload="init()">
-        <!--header-->
-        <header>
-            <div class="heading">
-                <div class="left">
-                    <div class="hotline"><i class="fa fa-phone" aria-hidden="true"></i> Hotline: <span>028-38364748</span></div>
-                    <div><i class="fas fa-envelope"></i> Mail: <a href="mailto: ou@ou.edu.vn">ou@ou.edu.vn</a></div>
-                </div>
-                <div class="right">
-                    <div><a href="#"><i class="fas fa-store"></i> Hệ thống của hàng</a></div>
-                    <div><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Thông tin</a></div>
-                    <div class="question"><a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i> Hỏi đáp</a></div>
-                </div>
-            </div>
-        </header>
-           <!--Phần Menu-->
-           <nav id="Menu">
+        <!--Phần Menu-->
+        <nav id="Menu">
             <div class="logo">
                 <a href="index.html"><img src="./images/Logo/logo-5.png" alt=""></a>
             </div>
-
+    
             <!--Menu PC-->
             <nav id="menu-list">
                 <ul id="main-menu">
@@ -95,7 +82,7 @@
                     </li>
                 </ul>
             </nav>
-
+    
             <div id="icon-list">
                 <div class="search">
                     <div class="down">
@@ -103,28 +90,51 @@
                     </div>
                     <span class="icon-search"><i class="fa fa-search search-icon" aria-hidden="true"></i></span>
                 </div>
-
+    
                 <div class="cart">
-                    <a href="cart.html">
+                    <a onclick="showcart()">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <span>0</span>
+                        <span id="countsp">0</span>
                     </a>
+    
+                    <div id="showcart">
+                        <table>
+                            <tr>
+                                <th>Hình</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Đơn giá</th>
+                                <th>Số lượng</th>
+                                <th>Xóa</th>
+                                <th>Thành tiền (VND)</th>
+                            </tr>
+                            <tbody id="mycart">
+                                
+                            </tbody>
+                        </table>
+    
+                        <div id="btn-pay">
+                            <a href="cart.html">Gửi đơn hàng</a>
+                            <button onclick="xoatatca()">Xóa tất cả</button>
+                        </div>
+                    </div>
                 </div>
+                
+    
                 <div class="user"><a href="Create-login.html"><i class="fas fa-user"></i></a></div>
             </div> 
-
+    
             <label for="check-ipad" class="navbar-ipad-btn"><i class="fa fa-bars" aria-hidden="true"></i></label>
-
+    
             <input type="checkbox" id="check-ipad" class="check-nav-ipad">
-
+    
             <label for="check-ipad" class="nav-overlay"></label>
-
+    
             <!--navbar-ipad-->
             <nav class="nav-ipad">
                 <label for="check-ipad" class="navbar-ipad-close">
                     <i class="fa fa-times" aria-hidden="true"></i>
                 </label>
-
+    
                 <ul class="menu-ipad">
                     <li><a href="index.html"><img src="./images/Logo/logo-5.png" alt=""></a></li>
                     <li>
@@ -182,7 +192,7 @@
                     <li class="sub-menu-ipad"><a href="Create-login.html">Đăng ký / đăng nhập</a></li>
                 </ul>
             </nav>
-
+    
             <!--Menu mobile-->
             <div class="navBar-mobile">
                 <ul class="mobile-menu-list">
@@ -216,7 +226,7 @@
             </div>
             
             <input type="checkbox" id="check" class="nav-input">
-
+    
             <nav class="nav-mobile">
                 <ul class="menu-mobile">
                     <li>
@@ -273,8 +283,9 @@
                     <li class="sub-menu-mobile"><a href="Contact.html">Hệ Thống Cửa Hàng</a></li>
                 </ul>
             </nav>
-
-        </nav>
+    
+            </nav> 
+            
         <section class="ads">
             <div id="demo" class="carousel slide" data-ride="carousel">
 
@@ -288,13 +299,13 @@
                 <!-- The slideshow -->
                 <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./images/ADS/ADS_AK1.jpg" alt="ADS Jeans">
+                    <img src="./images/ADS/ADS_AK1.jpg" alt="ADS">
                 </div>
                 <div class="carousel-item">
-                    <img src="./images/ADS/ADS_AK2.jpg" alt="ADS Jeans">
+                    <img src="./images/ADS/ADS_AK2.jpg" alt="ADS">
                 </div>
                 <div class="carousel-item">
-                    <img src="./images/ADS/ADS_AK3.jpg" alt="ADS Jeans">
+                    <img src="./images/Sale/sale-4.png" alt="ADS">
                 </div>
                 </div>
             
@@ -388,7 +399,8 @@
                     <div class="comment">
                         <h4>Áo Khoác Dù Trơn AK020</h4>
                         <div class="price">
-                            <div class="money-discout price-main">270.000 VND <span>300.000 VND</span></div>
+                            <div class="money-discout price-main">270.000 VND</div> 
+                            <div  class="old-price">300.000 VND</div>
                         </div>
                     </div>
                     <div class="label-new">NEW</div>
@@ -434,7 +446,8 @@
                     <div class="comment">
                         <h4>Áo Khoác Nẹp Bấm Có Nút AK010</h4>
                         <div class="price">
-                            <div class="money-discout price-main">495.000 VND <span>550.000 VND</span></div>
+                            <div class="money-discout price-main">495.000 VND</div> 
+                            <div  class="old-price">550.000 VND</div>
                         </div>  
                     </div>
                     <div class="discout">-10%</div>
@@ -472,7 +485,8 @@
                     <div class="comment">
                         <h4>Áo Khoác Dù Đỏ Đô AK138</h4>
                         <div class="price">
-                            <div class="money-discout price-main">570.000 VND <span>600.000 VND</span></div>
+                            <div class="money-discout price-main">570.000 VND</div> 
+                            <div  class="old-price">600.000 VND</div>
                         </div>
                     </div>
                     <div class="discout">-5%</div>
@@ -531,7 +545,8 @@
                     <div class="comment">
                         <h4>Áo Khoác Jean Xám Đen AK262</h4>
                         <div class="price">
-                            <div class="money-discout price-main">425.000 VND <span>500.000 VND</span></div>
+                            <div class="money-discout price-main">425.000 VND</div> 
+                            <div  class="old-price">500.000 VND</div>
                         </div>
                     </div>
                     <div class="discout">-15%</div>
@@ -558,7 +573,8 @@
                     <div class="comment">
                         <h4>Áo Khoác Da Lộn Limited AK016</h4>
                         <div class="price">
-                            <div class="money-discout price-main">425.000 VND <span>500.000 VND</span></div>
+                            <div class="money-discout price-main">425.000 VND</div>
+                            <div class="old-price">500.000 VND</div>
                         </div>
                     </div>
                     <div class="discout">-15%</div>
@@ -602,7 +618,8 @@
                     <div class="comment">
                         <h4>Áo Khoác Jean Xanh AK255</h4>
                         <div class="price">
-                            <div class="money-discout price-main">400.000 VND <span>500.000 VND</span></div>
+                            <div class="money-discout price-main">400.000 VND</div> 
+                            <div  class="old-price">500.000 VND</div>
                         </div>
                     </div>
                     <div class="discout">-20%</div>
@@ -713,7 +730,7 @@
             <p>Copyright © 2020 OU&D Studio. All rights reserved</p>
         </div>
 
-        <!--Nodal-box-->
+        <!--Modal box-->
         <div class="modal-box">
             <div class="modal-container js-modal-container">
                 <div class="close js-modal-close">
@@ -722,35 +739,20 @@
     
                 <div class="modal-body">
                     <div class="modal-image">
-                        <img src="./images/Áo khoác/AK019_Black.png" alt="áo khoác">
+                        <img src="" alt="áo khoác">
                     </div>
                     <div class="modal-information">
-                        <div class="title">Áo Khoác Dù Trơn Nón Rời AK019</div>
-                        <h3 class="money">345.000 VND</h3>
+                        <div class="title"></div>
+                        <h3 class="money"></h3>
                         <div class="condition">Tình trạng: còn hàng</div>
                         <div class="amount">Số lượng*</div>
-                        <tr>
-                            <td>
-                                <select style="width: 50%; height: 40px;" name="number" id="">
-                                    <option selected value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                </select>
-                            </td>
-                        </tr>
+                        <input type="number" name="soLuong" min="1" max="10" value="1" style="width: 30%; text-align: center; ">
                         <div class="cart">
                             <ul>
                                 <li class="dangKy">
                                     <i class="fas fa-shopping-cart"></i> ĐĂNG KÝ MUA HÀNG
                                 </li>
-                                <li>+ Thêm vào giỏ hàng</li>
+                                <li class="insert-cart" onclick="themvaogiohang(this)">+ Thêm vào giỏ hàng</li>
                             </ul>
                         </div>
                         <div class="btn"><a href="#">Xem chi tiết</a></div>
@@ -775,7 +777,7 @@
                    
                     const product = e.target.closest(".product");
                     modal.querySelector(".title").innerHTML = product.querySelector(".comment h4").innerHTML;
-                    product.querySelector(".price-main").innerHTML = modal.querySelector(".money").innerHTML;
+                    modal.querySelector(".money").innerHTML = product.querySelector(".price-main").innerHTML;
                     modal.querySelector(".modal-image img").src = product.querySelector("img").src;
 
 
@@ -819,30 +821,33 @@
           <!-- Messenger Plugin chat Code -->
     <div id="fb-root"></div>
 
-    <!-- Your Plugin chat code -->
-    <div id="fb-customer-chat" class="fb-customerchat">
-    </div>
+       <!-- Messenger Plugin chat Code -->
+       <div id="fb-root"></div>
 
-    <script>
-      var chatbox = document.getElementById('fb-customer-chat');
-      chatbox.setAttribute("page_id", "108938628159840");
-      chatbox.setAttribute("attribution", "biz_inbox");
+       <!-- Your Plugin chat code -->
+       <div id="fb-customer-chat" class="fb-customerchat">
+       </div>
 
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml            : true,
-          version          : 'v12.0'
-        });
-      };
+       <script>
+       var chatbox = document.getElementById('fb-customer-chat');
+       chatbox.setAttribute("page_id", "108938628159840");
+       chatbox.setAttribute("attribution", "biz_inbox");
 
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
+       window.fbAsyncInit = function() {
+           FB.init({
+           xfbml            : true,
+           version          : 'v12.0'
+           });
+       };
+
+       (function(d, s, id) {
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) return;
+           js = d.createElement(s); js.id = id;
+           js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+           fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+       </script>
 
     </body>
 </html>

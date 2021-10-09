@@ -14,6 +14,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="./js/jquery-3.6.0.min.js"></script>
         <script src="./js/back-scroll.js"></script>
+        <script src="./js/cart.js"></script>
         <!--CSS-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -21,28 +22,15 @@
         <link rel="shortcut icon" href="./images/Logo/logo-2.png">
         <link rel="stylesheet" href="./CSS/menu-foot-imgProduct.css">
         <link rel="stylesheet" href="./CSS/contact.css">
+        <link rel="stylesheet" href="./CSS/modal-box-product.css">
         <link rel="stylesheet" href="./CSS responsive/responsive-menu-foot.css">
         <link rel="stylesheet" href="./CSS responsive/responsive-contact.css">
         <title>Quần Jeans Nam</title>
     </head>
 </head>
 <body>
-    <!--header-->
-    <header>
-        <div class="heading">
-            <div class="left">
-                <div class="hotline"><i class="fa fa-phone" aria-hidden="true"></i> Hotline: <span>028-38364748</span></div>
-                <div><i class="fas fa-envelope"></i> Mail: <a href="mailto: ou@ou.edu.vn">ou@ou.edu.vn</a></div>
-            </div>
-            <div class="right">
-                <div><a href="#"><i class="fas fa-store"></i> Hệ thống của hàng</a></div>
-                <div><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Thông tin</a></div>
-                <div class="question"><a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i> Hỏi đáp</a></div>
-            </div>
-        </div>
-    </header>
-       <!--Phần Menu-->
-       <nav id="Menu">
+    <!--Phần Menu-->
+    <nav id="Menu">
         <div class="logo">
             <a href="index.html"><img src="./images/Logo/logo-5.png" alt=""></a>
         </div>
@@ -107,11 +95,34 @@
             </div>
 
             <div class="cart">
-                <a href="cart.html">
+                <a onclick="showcart()">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                    <span>0</span>
+                    <span id="countsp">0</span>
                 </a>
+
+                <div id="showcart">
+                    <table>
+                        <tr>
+                            <th>Hình</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Đơn giá</th>
+                            <th>Số lượng</th>
+                            <th>Xóa</th>
+                            <th>Thành tiền (VND)</th>
+                        </tr>
+                        <tbody id="mycart">
+                            
+                        </tbody>
+                    </table>
+
+                    <div id="btn-pay">
+                        <a href="cart.html">Gửi đơn hàng</a>
+                        <button onclick="xoatatca()">Xóa tất cả</button>
+                    </div>
+                </div>
             </div>
+            
+
             <div class="user"><a href="Create-login.html"><i class="fas fa-user"></i></a></div>
         </div> 
 
@@ -276,7 +287,9 @@
             </ul>
         </nav>
 
-    </nav>
+        </nav> 
+        
+    <!--Phần liên hệ-->
     <section class="contact">
         <div class="contact-body">
             <div class="contact-main">
@@ -329,64 +342,64 @@
                         <div class="BS">
                             <div class="image-product">
                                 <a href="#"><img src="./images/BestSeller/BS1_QS.jpg" alt=""></a>
-                                <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                                <span class="animate__animated animate__rotateInDownLeft js-buy-product"><a href="javascript:void(0);"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
                             </div>
                             <div class="comment-top">
                                 <div class="name">Quần Short Nỉ Thuê QS013</div>
-                                <div class="money">245.000 VND</div>
+                                <div class="money price-main">245.000 VND</div>
                             </div>
                             <div class="label">NEW</div>
                         </div>
                         <div class="BS">
                             <div class="image-product">
                                <a href="#"><img src="./images/BestSeller/BS2_AOK.jpg" alt=""></a>
-                               <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                               <span class="animate__animated animate__rotateInDownLeft js-buy-product"><a href="javascript:void(0);"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
                             </div>
                             <div class="comment-top">
                                 <div class="name">Áo Khoác Dù 3 Lớp Đen AK195</div>
-                                <div class="money">275.000VND</div>
+                                <div class="money price-main">275.000VND</div>
                             </div>
                             <div class="label">NEW</div>
                         </div>
                         <div class="BS">
                             <div class="image-product">
                                 <a href="#"><img src="./images/BestSeller/BS6_CV.png" alt=""></a>
-                               <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                               <span class="animate__animated animate__rotateInDownLeft js-buy-product"><a href="javascript:void(0);"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
                             </div>
                             <div class="comment-top">
                                 <div class="name">Cavat Họa Tiết CV016 Màu Xám</div>
-                                <div class="money">145.000 VND</div>
+                                <div class="money price-main">145.000 VND</div>
                             </div>
                         </div>   
                         <div class="BS">
                             <div class="image-product">
                                 <a href="#"><img src="./images/BestSeller/BS5_AV.jpg" alt=""></a>
-                               <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                               <span class="animate__animated animate__rotateInDownLeft js-buy-product"><a href="javascript:void(0);"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
                             </div>
                             <div class="comment-top">
                                 <div class="name">Áo Vest NAZAFU AV1139</div>
-                                <div class="money">1.350.000 VND</div>
+                                <div class="money price-main">1.350.000 VND</div>
                             </div>
                             <div class="label">NEW</div>
                         </div>
                         <div class="BS">
                             <div class="image-product">
                                 <a href="#"><img src="./images/BestSeller/BS4_QJ.png" alt=""></a>
-                               <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                               <span class="animate__animated animate__rotateInDownLeft js-buy-product"><a href="javascript:void(0);"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
                             </div>
                             <div class="comment-top">
                                 <div class="name">Quần Jogger Lưng Thun Cài Nút J004</div>
-                                <div class="money">300.000 VND</div>
+                                <div class="money price-main">300.000 VND</div>
                             </div> 
                         </div>
                         <div class="BS">
                             <div class="image-product">
                                 <a href="#"><img src="./images/BestSeller/BS3_AT.png" alt=""></a>
-                                <span class="animate__animated animate__rotateInDownLeft"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                                <span class="animate__animated animate__rotateInDownLeft js-buy-product"><a href="javascript:void(0);"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
                             </div>
                             <div class="comment-top">
                                 <div class="name">Áo Thun Tay Dài Thêu Works AT039</div>
-                                <div class="money">220.000 VND</div>
+                                <div class="money price-main">220.000 VND</div>
                             </div>
                             <div class="label">NEW</div>
                         </div>
@@ -562,7 +575,73 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js" integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>           
     <script src="./js/carousel.js"></script>
 
+
+       <!--Modal box-->
+       <div class="modal-box">
+        <div class="modal-container js-modal-container">
+            <div class="close js-modal-close">
+                <a href="javascript:void(0);"><i class="fa fa-times" aria-hidden="true"></i></a>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="" alt="áo khoác">
+                </div>
+                <div class="modal-information">
+                    <div class="title"></div>
+                    <h3 class="money"></h3>
+                    <div class="condition">Tình trạng: còn hàng</div>
+                    <div class="amount">Số lượng*</div>
+                    <input type="number" name="soLuong" min="1" max="10" value="1" style="width: 30%; text-align: center; ">
+                    <div class="cart">
+                        <ul>
+                            <li class="dangKy">
+                                <i class="fas fa-shopping-cart"></i> ĐĂNG KÝ MUA HÀNG
+                            </li>
+                            <li class="insert-cart" onclick="themvaogiohang(this)">+ Thêm vào giỏ hàng</li>
+                        </ul>
+                    </div>
+                    <div class="btn"><a href="#">Xem chi tiết</a></div>
+                    <br>
+                    <input type="button" value="Đóng cửa sổ" class="close js-modal-close-1">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
+        // Xử lý modal box
+        const buyBtn = document.querySelectorAll(".js-buy-product");
+        
+        const modal = document.querySelector(".modal-box");
+        const modalContainer = document.querySelector(".js-modal-container");
+        const closeModal = document.querySelector(".js-modal-close");
+        const close1 = document.querySelector(".js-modal-close-1");
+
+        for(let i = 0; i < buyBtn.length; i++){
+                buyBtn[i].onclick = function(event) {
+                   
+                   const productBs = event.target.closest(".BS");
+                   modal.querySelector(".title").innerHTML = productBs.querySelector(".comment-top .name").innerHTML;
+                   modal.querySelector(".money").innerHTML = productBs.querySelector(".comment-top .money").innerHTML;
+                   modal.querySelector(".modal-image img").src = productBs.querySelector("img").src;
+
+                   modal.classList.add("open");
+                }
+            }
+            
+            function closeBuyProduct() {
+                modal.classList.remove("open");
+            }
+
+            
+            closeModal.addEventListener("click", closeBuyProduct);
+            modal.addEventListener("click", closeBuyProduct);
+            close1.addEventListener("click", closeBuyProduct);
+            modalContainer.addEventListener("click", function (event) {
+                event.stopPropagation(); /*ngừng sự kiện nổi bọt*/
+            });
+        // Xử lý thanh cuộn
         $(document).ready(function(){
             $('#mobile-list-store').click(function(){
                 $('#list-store').slideToggle();
@@ -572,6 +651,15 @@
                 $('#contact-list').slideToggle();
             })
         })
+
+        // Xử lý Trang
+
+        $(document).ready(function(){
+            $("ul.page a").click(function() {
+                $("ul.page a").removeClass("active")
+                $(this).addClass("active")
+            })
+        })     
     </script>
 
       <!-- Messenger Plugin chat Code -->
@@ -580,26 +668,26 @@
       <!-- Your Plugin chat code -->
       <div id="fb-customer-chat" class="fb-customerchat">
       </div>
-  
+
       <script>
-        var chatbox = document.getElementById('fb-customer-chat');
-        chatbox.setAttribute("page_id", "108938628159840");
-        chatbox.setAttribute("attribution", "biz_inbox");
-  
-        window.fbAsyncInit = function() {
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "108938628159840");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
           FB.init({
-            xfbml            : true,
-            version          : 'v12.0'
+          xfbml            : true,
+          version          : 'v12.0'
           });
-        };
-  
-        (function(d, s, id) {
+      };
+
+      (function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
           if (d.getElementById(id)) return;
           js = d.createElement(s); js.id = id;
           js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
           fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+      }(document, 'script', 'facebook-jssdk'));
       </script>
     
 </body>

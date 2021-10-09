@@ -14,6 +14,7 @@
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/back-scroll.js"></script>
     <script src="./js/change-img.js"></script>
+    <script src="./js/cart.js"></script>
     <!--CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
@@ -29,22 +30,8 @@
     <title>Áo Khoác Dù Trơn Nón Rời Màu Đen AK019</title>
 </head>
 <body onload="init()">
-   <!--header-->
-   <header>
-        <div class="heading">
-            <div class="left">
-                <div class="hotline"><i class="fa fa-phone" aria-hidden="true"></i> Hotline: <span>028-38364748</span></div>
-                <div><i class="fas fa-envelope"></i> Mail: <a href="mailto: ou@ou.edu.vn">ou@ou.edu.vn</a></div>
-            </div>
-            <div class="right">
-                <div><a href="#"><i class="fas fa-store"></i> Hệ thống của hàng</a></div>
-                <div><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Thông tin</a></div>
-                <div class="question"><a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i> Hỏi đáp</a></div>
-            </div>
-        </div>
-    </header>
-       <!--Phần Menu-->
-       <nav id="Menu">
+     <!--Phần Menu-->
+     <nav id="Menu">
         <div class="logo">
             <a href="index.html"><img src="./images/Logo/logo-5.png" alt=""></a>
         </div>
@@ -109,11 +96,34 @@
             </div>
 
             <div class="cart">
-                <a href="cart.html">
+                <a onclick="showcart()">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                    <span>0</span>
+                    <span id="countsp">0</span>
                 </a>
+
+                <div id="showcart">
+                    <table>
+                        <tr>
+                            <th>Hình</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Đơn giá</th>
+                            <th>Số lượng</th>
+                            <th>Xóa</th>
+                            <th>Thành tiền (VND)</th>
+                        </tr>
+                        <tbody id="mycart">
+                            
+                        </tbody>
+                    </table>
+
+                    <div id="btn-pay">
+                        <a href="cart.html">Gửi đơn hàng</a>
+                        <button onclick="xoatatca()">Xóa tất cả</button>
+                    </div>
+                </div>
             </div>
+            
+
             <div class="user"><a href="Create-login.html"><i class="fas fa-user"></i></a></div>
         </div> 
 
@@ -278,7 +288,8 @@
             </ul>
         </nav>
 
-    </nav>
+        </nav> 
+         
     <!--Sản phẩm-->
     <section class="product">
         <div class="Product">
@@ -586,7 +597,7 @@
     </div>
 
     <!--Modal box product (modal cho sản phẩm)-->
-    <div class="modal-box">
+     <div class="modal-box">
         <div class="modal-container js-modal-container">
             <div class="close js-modal-close-product">
                 <a href="javascript:void(0);"><i class="fa fa-times" aria-hidden="true"></i></a>
@@ -597,32 +608,17 @@
                     <img src="./images/Áo khoác/AK019_Black.png" alt="áo khoác">
                 </div>
                 <div class="modal-information">
-                    <div class="title">Áo Khoác Dù Trơn Nón Rời AK019</div>
-                    <h3 class="money">345.000 VND</h3>
+                    <div class="title"></div>
+                    <h3 class="money"></h3>
                     <div class="condition">Tình trạng: còn hàng</div>
                     <div class="amount">Số lượng*</div>
-                    <tr>
-                        <td>
-                            <select style="width: 50%; height: 40px;" name="number" id="">
-                                <option selected value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                            </select>
-                        </td>
-                    </tr>
+                    <input type="number" name="soLuong" min="1" max="10" value="1" style="width: 30%; text-align: center; ">
                     <div class="cart">
                         <ul>
                             <li class="dangKy">
                                 <i class="fas fa-shopping-cart"></i> ĐĂNG KÝ MUA HÀNG
                             </li>
-                            <li>+ Thêm vào giỏ hàng</li>
+                            <li class="insert-cart" onclick="themvaogiohang(this)">+ Thêm vào giỏ hàng</li>
                         </ul>
                     </div>
                     <div class="btn"><a href="#">Xem chi tiết</a></div>
@@ -662,7 +658,7 @@
                    
                     const product = e.target.closest(".thumb-sub");
                     modal.querySelector(".title").innerHTML = product.querySelector(".comment .name").innerHTML;
-                    product.querySelector(".price-main").innerHTML = modal.querySelector(".money").innerHTML;
+                    modal.querySelector(".money").innerHTML = product.querySelector(".price-main").innerHTML;
                     modal.querySelector(".modal-image img").src = product.querySelector("img").src;
 
 
@@ -706,33 +702,33 @@
         })
     </script>
 
-      <!-- Messenger Plugin chat Code -->
-      <div id="fb-root"></div>
+          <!-- Messenger Plugin chat Code -->
+          <div id="fb-root"></div>
 
-      <!-- Your Plugin chat code -->
-      <div id="fb-customer-chat" class="fb-customerchat">
-      </div>
+          <!-- Your Plugin chat code -->
+          <div id="fb-customer-chat" class="fb-customerchat">
+          </div>
   
-      <script>
-        var chatbox = document.getElementById('fb-customer-chat');
-        chatbox.setAttribute("page_id", "108938628159840");
-        chatbox.setAttribute("attribution", "biz_inbox");
+          <script>
+          var chatbox = document.getElementById('fb-customer-chat');
+          chatbox.setAttribute("page_id", "108938628159840");
+          chatbox.setAttribute("attribution", "biz_inbox");
   
-        window.fbAsyncInit = function() {
-          FB.init({
-            xfbml            : true,
-            version          : 'v12.0'
-          });
-        };
+          window.fbAsyncInit = function() {
+              FB.init({
+              xfbml            : true,
+              version          : 'v12.0'
+              });
+          };
   
-        (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-      </script>
+          (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+              fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
+          </script>
 
 </body>
 </html>

@@ -1,6 +1,6 @@
 /* New */
 .New h1{
-    margin-top: 20px;
+    margin: 50px 0;
     text-align: center;
     font-weight: bold;
 }
@@ -10,7 +10,6 @@
     margin: 3% auto;
     display: flex;
     align-items: flex-start;
-    justify-content: space-around;
 }
 
 .New-contain img,
@@ -33,7 +32,6 @@
     margin: 0.5%;
     padding: 5px;
     display: flex;
-    justify-content: space-between;
 }
 
 .sub-news > .sub-item:first-child{
@@ -41,8 +39,8 @@
     padding: 0 5px 5px;
 }
 
-.sub-item > div{
-    padding: 0 5px;
+.sub-item > .post-thumb{
+    padding: 0 5px 0 0;
 }
 
 .content h4 a{
@@ -50,6 +48,7 @@
     color: #333;
     font-weight: bold;
     font-size: 17px;
+    margin: 0;
 }
 
 .New-contain .main-new .content h4 {
@@ -62,9 +61,21 @@
 }
 
 /* Blog */
+.Blog .title{
+    font-size: 25px;
+    text-align: center;
+}
 
-.Blog h3{
-   text-align: center;
+.Blog .title::before{
+    content: "------------------------------------------------------------------------------------";
+    position: absolute;
+    left: 40px;
+}
+
+.Blog .title::after{
+    content: "------------------------------------------------------------------------------------";
+    position: absolute;
+    right: 40px;
 }
 
 .Blog-contain{
@@ -91,4 +102,36 @@
 
 .Blog-sub .content{
     width: 70%;
+}
+
+/*section page*/
+.pagination{
+    width: 95%;
+    padding: 10px 0;
+    margin: 20px auto;
+    border-top: 1px solid #ccc;
+}
+
+ul.page{
+    display: flex;
+    overflow: hidden;
+    justify-content: left;
+    padding: 10px 0;
+}
+
+.active{
+    background-color: #ccc;
+}
+
+ul.page li a{
+    border: 1px solid #000;
+    color: #000;
+    text-decoration: none;
+    padding: 5px 10px; 
+}
+li.number:hover a{
+    background-color: #ccc;
+}
+span.iconToi{
+    font-size: 10px;
 }

@@ -1,0 +1,77 @@
+/*Ipad*/
+@media screen and (min-width: 740px) and (max-width: 1023px){
+    .New-contain{
+        width: 98%;
+    }
+    
+    .content > div{
+        display: none;
+    }
+
+    .content h4 a{
+        font-size: 12px;
+    }
+
+    .sub-item .post-thumb{
+        width: 70%;
+    }
+
+    .sub-item .content{
+        padding: 0;
+    }
+
+    .Blog .title::after,
+    .Blog .title::before{
+        content: "------------------------------------";
+    }
+}
+
+@media screen and (max-width: 739px){
+    .New-contain{
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .New-contain > div {
+        width: 98%;
+        margin: 10px auto;
+        padding: 0;
+    }
+
+    .content .content-sub{
+        display: none;
+    }
+
+    .sub-item > div{
+        width: 50%;
+    }
+
+    .content h4 a{
+        font-size: 15px;
+    }
+
+    .firts-content{
+        display: block;
+    }
+
+    .Blog-contain > .Blog-sub{
+        width: 98%;
+        flex-direction: column;
+    }
+
+    .Blog-sub .post-thumb,
+    .Blog-sub .content{
+        width: 100%;
+    }
+
+    .Blog .title::after{
+        content: "--------------";
+        right: 20px;
+    }
+
+    .Blog .title::before{
+        content: "--------------";
+        left: 20px;
+    }
+}
