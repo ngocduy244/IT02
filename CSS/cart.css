@@ -31,3 +31,65 @@ tbody {
     text-align: center;
     font-size: 17px;
 }
+
+/* cart-sub */
+.cart-sub{
+    display: flex;
+    width: 80%;
+    margin: 30px auto;
+}
+
+.cart-sub .sub-left{
+    width: 40%;
+}
+
+.cart-sub .sub-right{
+    width: 60%;
+}
+
+.sub-right ul{
+    display: flex;
+    justify-content: space-between;
+    border-left: 1px solid #666;
+    border-right: 1px solid #666;
+    border-top: 1px solid #666;
+}
+
+.sub-right ul:nth-child(5){
+    border-bottom: 1px solid #666;
+}
+
+.sub-right ul li{
+    padding: 5px;
+    font-size: 20px;
+}
+
+.sub-right ul li > span{
+    font-size: 15px;
+    color: #666;
+}
+
+.sub-right ul li.left{
+    width: 60%;
+    border-right: 1px solid #666;
+}
+
+.checkout-cart{
+    margin-top: 20px;
+    display: flex;
+    justify-content: right;
+}
+
+.checkout-cart > div{
+    padding: 10px;
+    border: 1px solid #666;
+    background-color: rgb(68, 68, 139);
+    color: #fff;
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+.checkout-cart > div:hover{
+    opacity: 1;
+    cursor: pointer;
+}

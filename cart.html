@@ -95,7 +95,7 @@
                 </div>
 
                 <div class="cart">
-                    <a onclick="showcart()">
+                    <a href="javascript: void();">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <span id="countsp">0</span>
                     </a>
@@ -269,21 +269,51 @@
         </nav> 
   
     <div class="cart-main">
-            <h1>GIỎ HÀNG</h1>
-            <table>
-                <tr>
-                    <th>Hình</th>
-                    <th>Tên sản phẩm</th>
-                    <th>Đơn giá</th>
-                    <th>Số lượng</th>
-                     <th>Thành tiền (VND)</th>
-                    <th>Xóa</th>
-                </tr>
-                <tbody id="mycart"></tbody>
+        <h1>GIỎ HÀNG</h1>
+        <table>
+            <tr>
+                <th>Hình</th>
+                <th>Tên sản phẩm</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền (VND)</th>
+                <th>Xóa</th>
+            </tr>
+            <tbody id="mycart">
                 
-            </table>              
+            </tbody>
+        </table>   
     </div>
        
+    <div class="cart-sub">
+        <div class="sub-left"></div>
+        <div class="sub-right">
+            <ul>
+                <li class="left">Số lượng</li>
+                <li id="amount"></li>
+            </ul>
+            <ul>
+                <li class="left">Giá trị hàng hóa</li>
+                <li id="tongTien"> </li>
+            </ul>
+            <ul>
+                <li class="left">Phí vận chuyển</li>
+                <li style="font-style: italic;">Chưa có</li>
+            </ul>
+            <ul>
+                <li class="left">Giảm tiền</li>
+                <li>0 VND</li>
+            </ul>
+            <ul>
+                <li class="left">Thành tiền <span>(đã bao gồm VAT)</span></li>
+                <li id="thanhToan"></li>
+            </ul>
+
+            <div class="checkout-cart">
+                <div>TIẾN HÀNH THANH TOÁN</div>
+            </div>
+        </div>
+    </div>
     <!--Phone-->
     <section class="phone">
         <div class="phone">

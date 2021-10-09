@@ -10,6 +10,11 @@
     #mycart tr td.name{
         width: 200px;
     }
+
+    /* cart-sub */
+    .cart-sub{
+        width: 95%;
+    }
     
     
 }
@@ -46,4 +51,25 @@
         width: 50px;
     }
     
+    /* cart-sub */
+    .cart-sub{
+        width: 95%;
+    }
+
+    .cart-sub .sub-left{
+        width: 0;
+    }
+
+    .cart-sub .sub-right{
+        width: 100%;
+    }
+
+    .sub-right ul li{
+        font-size: 15px;
+    }
+
+    .sub-right ul li > span{
+        font-size: 13px;
+    }
+
 }

@@ -58,14 +58,12 @@ function xoasp(x){
     var tensp = tr.children[1].innerHTML;
     tr.remove();
 
-    
-
     // xoa sản phẩm trong mảng
     for(let i = 0; i < giohang.length; i++)
         if(giohang[i][2] == tensp){
             giohang.splice(i,1);
         }
-    // console.log(giohang);
+   
     showmycart();
     showcountsp();
     sessionStorage.setItem("giohang", JSON.stringify(giohang));
@@ -77,7 +75,6 @@ function xoatatca(x){
    showcountsp();
    showmycart();
    sessionStorage.setItem("giohang", JSON.stringify(giohang));
-
 }
 
 function showcart(){
@@ -89,24 +86,46 @@ function showcart(){
     showmycart();   
 }
 
-function showgiohang_trangthanhtoan(){
-    
-    var gh = sessionStorage.getItem("giohang");
-    var giohang = JSON.parse(gh); 
+function xoaProduct(y){
+    // xoa tr
+   
+    var tr = y.parentElement.parentElement;
+    var tensp = tr.children[1].innerHTML;
+    tr.remove();
 
+   
+
+    // xoa sản phẩm trong mảng
+    for(let i = 0; i < giohangHoa.length; i++)
+        if(giohangHoa[i][2] == tensp){
+            giohangHoa.splice(i,1);
+        }
+
+    showgiohang_trangthanhtoan()
+}
+
+var gh = sessionStorage.getItem("giohang");
+var giohangHoa = JSON.parse(gh); 
+
+function showgiohang_trangthanhtoan(){
+    console.log(giohangHoa)
     var ttgh = "";
     var tong = 0;
+    var tongSL = 0;
 
-    for(let i = 0; i < giohang.length; i++){
-        var tt = parseInt(giohang[i][1]) * parseInt(giohang[i][3]);
+    for(let i = 0; i < giohangHoa.length; i++){
+        var tt = parseInt(giohangHoa[i][1]) * parseInt(giohangHoa[i][3]);
+        var SL = parseInt(giohangHoa[i][3]);
+        tongSL += SL;
+
         tong += tt;
         ttgh += '<tr>'+
-            '<td><img src="'+ giohang[i][0] +' " alt=""></td>'+
-            '<td class="name">'+ giohang[i][2] +'</td>'+
-            '<td>'+ giohang[i][1] +'</td>'+
-            '<td>'+ giohang[i][3] +'</td>'+
+            '<td><img src="'+ giohangHoa[i][0] +' " alt=""></td>'+
+            '<td class="name">'+ giohangHoa[i][2] +'</td>'+
+            '<td>'+ giohangHoa[i][1] +'</td>'+
+            '<td>'+ giohangHoa[i][3] +'</td>'+
             '<td><div>'+ tt +'.000 VND</div></td>'+
-            '<td><a href="javascript:void(0);"><i class="fa fa-trash" aria-hidden="true"></i></a></td>'+
+            '<td><a onclick="xoaProduct(this)"><i class="fa fa-trash" aria-hidden="true"></i></a></td>'+
         '</tr>';
     }
 
@@ -115,7 +134,19 @@ function showgiohang_trangthanhtoan(){
         '<th colspan="4"><div>'+ tong +'.000 VND</div></th>'+
     '</tr>';
 
+    var tongTien = document.getElementById("tongTien");
+    var amount = document.getElementById("amount");
+    var thanhToan = document.getElementById("thanhToan");
+
+    amount.innerHTML = tongSL;
+    thanhToan.innerHTML = tongSL;
+
+    tongTien.innerHTML = tong + '.000 VND';
+    thanhToan.innerHTML = tong + '.000 VND';
+    
     document.getElementById("mycart").innerHTML = ttgh;
 }
+
+
 
 showgiohang_trangthanhtoan();
