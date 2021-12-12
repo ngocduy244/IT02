@@ -6,15 +6,24 @@ function themvaogiohang(x){
     var hinh = boxsp[0].children[0].src
     var tensp = boxsp[1].children[0].innerHTML
     var gia = boxsp[1].children[1].innerHTML
-    var soLuong = boxsp[1].children[4].value
+    var soLuong = parseInt(boxsp[1].children[4].value);
 
     
     var sp = new Array(hinh, gia, tensp, soLuong)
 
-    // Gán giá trị mảng sp vào giohang
-    giohang.push(sp)
-
-    //console.log(giohang)
+    var kt  =  0;
+    //Kiểm tra trong giỏ hàng
+    for(let i = 0; i  <  giohang.length; i++){
+        if(giohang[i][2] == tensp  )
+        {
+            kt = 1;
+            soLuong += giohang[i][3];
+            giohang[i][3] = soLuong;
+            break;
+        }
+    }
+   if(kt == 0)
+        giohang.push(sp) ;  // Gán giá trị mảng sp vào giohang
 
     // Gọi hàm  showcountsp để cập nhật số lượng sp hiện tại
     showcountsp();
@@ -56,24 +65,6 @@ function showmycart(){
            
         tong += tt;
 
-        var sum = tong.toString();
-        var a, b, c;
-
-        if(sum.length == 5){
-            a = sum.slice(0,2);
-            b = sum.slice(2,5);
-            c = `${a}.${b}.000 VND`;
-        }
-        else if(sum.length == 4){
-            a = sum.slice(0,1);
-            b = sum.slice(1,4);
-            c = `${a}.${b}.000 VND`;
-        }
-        else if(sum.length == 3){
-            a = sum.slice(0);
-            c = `${a}.000 VND`;
-        }
-
         ttgh += '<tr>'+
             '<td><img src="'+ giohang[i][0] +' " alt=""></td>'+
             '<td>'+ giohang[i][2] +'</td>'+
@@ -84,6 +75,24 @@ function showmycart(){
         '</tr>';
     }
 
+    var sum = tong.toString();
+    var a, b, c;
+
+    if(sum.length == 5){
+        a = sum.slice(0,2);
+        b = sum.slice(2,5);
+        c = `${a}.${b}.000 VND`;
+    }
+    else if(sum.length == 4){
+        a = sum.slice(0,1);
+        b = sum.slice(1,4);
+        c = `${a}.${b}.000 VND`;
+    }
+    else if(sum.length == 3){
+        a = sum.slice(0);
+        c = `${a}.000 VND`;
+    }
+    
     if(c == undefined)
         c = '0 VND';
         
@@ -160,6 +169,7 @@ function xoaProduct(y){
             giohangHoa.splice(i,1);
         }
 
+    //cập nhật lai trang thanh toán
     showgiohang_trangthanhtoan()
 }
 
@@ -168,7 +178,6 @@ var giohangHoa = JSON.parse(gh);
 
 
 function showgiohang_trangthanhtoan(){
-   
     var ttgh = "";
     var tong = 0;
     var tongSL = 0;
